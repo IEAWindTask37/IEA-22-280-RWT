@@ -429,6 +429,42 @@ components:
     spinner_gust_ws: 70.0
     hub_material: cast_iron
     spinner_material: glass_uni
+  nacelle:
+    drivetrain:
+      uptilt: 0.1047197551196598 # 6 deg
+      distance_tt_hub: 5.614
+      overhang: 14.0
+      drag_coefficient: 0.5
+      lss_diameter: [4.0, 4.0]
+      lss_wall_thickness: [0.0023506415490425815, 0.02658034699225456]
+      nose_diameter: [2.0499329510751547, 2.0487990837485235]
+      nose_wall_thickness: [0.02496647553757745, 0.024399541874261754]
+      generator_length: 2.15
+      bedplate_wall_thickness:
+        grid: [0.0, 0.3333333333333333, 0.6666666666666666, 1.0]
+        values: [0.008049530323462043, 0.006589269282677775, 0.014914369569753871, 0.026794598261220184]
+      gear_ratio: 1.0
+      gearbox_efficiency: 1.0
+      mb1Type: CARB
+      mb2Type: SRB
+      uptower: true
+      lss_material: steel_drive
+      bedplate_material: steel
+      generator_rpm_efficiency_user:
+        grid: [0.66673458, 0.68427487, 0.70181515, 0.71935544, 0.73689573, 0.75443601, 0.77197629, 0.78951658, 0.80705686, 0.82459715, 0.84213744, 0.85967772, 0.877218, 0.89475829, 0.91229857, 0.92983886, 0.94737915, 0.96491943, 0.98245971, 1.0]
+        values: [0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845, 0.9493134241862845]
+      generator_mass_user: 460613.341178015
+      distance_hub_mb: 0.4346684822917472
+      distance_mb_mb: 0.1
+      generator_radius_user: 4.75
+      damping_ratio: 0.005
+      brake_mass_user: 0.0
+      hvac_mass_coefficient: 0.025
+      converter_mass_user: 0.0
+      transformer_mass_user: 0.0
+      bedplate_flange_width: 1.0
+      bedplate_flange_thickness: 0.05
+      bedplate_web_thickness: 0.05
   tower: 
     outer_shape_bem: 
       reference_axis: 
