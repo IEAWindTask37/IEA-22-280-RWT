@@ -438,7 +438,7 @@ components:
     pitch_system_scaling_factor: 0.75
     spinner_gust_ws: 70.0
     hub_material: cast_iron
-    spinner_material: glass_uni
+    spinner_material: glass_uniax
   nacelle:
     drivetrain:
       uptilt: 0.1047197551196598 # 6 deg
