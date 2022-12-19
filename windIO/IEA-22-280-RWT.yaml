@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/IEAWindTask37/windIO/master/windIO/turbine/IEAontology_schema.yaml
 name: IEA 22MW Offshore Wind Turbine in Fixed Bottom Configuration
 assembly: 
   turbine_class: I
@@ -955,10 +956,10 @@ materials:
   - 
     name: carbon_uniax
     description: Baseline industry CFRP tested by Sandia National Labs within the BAR Project
-    source: Described in https://doi.org/10.5194/wes-7-19-2022 and https://energy.sandia.gov/download/45350/, RVE analysis
+    source: Described in https://doi.org/10.5194/wes-7-19-2022 and https://energy.sandia.gov/download/45350/, RVE analysis. Nominal E11 is 157.6 GPa, but it is reduced to 140 GPa to be more in line with the actual properties seen in real blades.
     orth: 1.0
     rho: 1600.0
-    E: [157599000000.0, 9100000000.0, 9100000000.0]
+    E: [140000000000.0, 9100000000.0, 9100000000.0]
     G: [4131000000.0, 4131000000.0, 2689000000.0]
     nu: [0.3133, 0.3133, 0.47066]
     Xt: [1285200000.0, 38100000.0, 0.0]
@@ -1027,22 +1028,6 @@ materials:
     component_id: 2
     roll_mass: 181.4368
   - 
-    name: balsa
-    rho: 110.0
-    E: [50000000.0, 50000000.0, 2730000000.0]
-    G: [16670000.0, 150000000.0, 150000000.0]
-    nu: [0.5, 0.013, 0.013]
-    orth: 1
-    Xt: 2083000.0
-    Xc: 1563000.0
-    S: 1250000.0
-    GIc: 303.0
-    GIIc: 3446.0
-    alp0: 53.0
-    component_id: 1
-    waste: 0.2
-    unit_cost: 13.0
-  - 
     name: medium_density_foam
     description: "Airex C70.130 PVC Foam, source 'https://www.3accorematerials.com/uploads/documents/TDS-AIREX-C70-E_1106.pdf'"
     source: Described in https://doi.org/10.5194/wes-7-19-2022
@@ -1096,7 +1081,7 @@ control:
     ps_percent: 0.8
     max_pitch: 1.57
     max_pitch_rate: 0.03490658503988659 # 2 deg/s
-    min_pitch: 0.0
+    min_pitch: -0.024434609527920613
   setpoint_smooth:
     ss_vsgain: 1
     ss_pcgain: 0.001
@@ -1113,7 +1098,7 @@ environment:
   water_dyn_viscosity: 0.0013351
   soil_shear_modulus: 140000000.0
   soil_poisson: 0.4
-  water_depth: 30.0
+  water_depth: 34.0
   significant_wave_height: 4.52
   significant_wave_period: 9.45
   gravity: 9.80665
