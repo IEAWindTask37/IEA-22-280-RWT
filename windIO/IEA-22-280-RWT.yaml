@@ -1,4 +1,4 @@
-name: eqn-22MW-280-rwt
+name: IEA 22MW Offshore Wind Turbine in Fixed Bottom Configuration
 components: 
   blade: 
     outer_shape_bem: 
@@ -767,45 +767,135 @@ materials:
   - 
     name: gelcoat
     rho: 1235.0
-    E: [3440000000.0, 3440000000.0, 3440000000.0]
-    G: [1323000000.0, 1323000000.0, 1323000000.0]
-    nu: [0.3, 0.3, 0.3]
+    E: 3440000000.0
+    G: 1323000000.0
+    nu: 0.3
     orth: 0
+    ply_t: 0.0005
+    waste: 0.25
+    unit_cost: 7.23
+
+  - name: Adhesive
+    orth: 0.0
+    rho: 1100.0
+    E: 4560000.0
+    G: 1450000.0
+    nu: 0.3
+    alpha: 0.0
+    Xt: 61510000.0
+    Xc: 65360000.0
+    S: 36610000.0
+    GIc: 0.0
+    GIIc: 0.0
+    alp0: 0.0
+    ply_t: 0.001
+    waste: 0.25
+    unit_cost: 7.23
   - 
     name: steel
     rho: 7850.0
-    E: [200000000000.0, 200000000000.0, 200000000000.0]
-    G: [79300000000.0, 79300000000.0, 79300000000.0]
-    nu: [0.265, 0.265, 0.265]
+    E: 200000000000.0
+    G: 79300000000.0
+    nu: 0.265
     orth: 0
-  - 
+  -  
     name: glass_uniax
-    rho: 1915.5
-    E: [41630000000.0, 14930000000.0, 13425830000.0]
-    G: [5047000000.0, 5046980000.0, 5046980000.0]
-    nu: [0.241, 0.2675, 0.3301]
-    orth: 1
-  - 
+    description: Vectorply E-LT-5500, Epikote MGS RIMR 135/Epicure MGS RIMH 1366 epoxy
+    source: MSU composites database 3D property tests, desrcibed in https://doi.org/10.5194/wes-7-19-2022
+    orth: 1.0
+    rho: 1940.0
+    E: [43700000000.0, 16500000000.0, 15450000000.0]
+    G: [3265000000.0, 3495000000.0, 3480000000.0]
+    nu: [0.262, 0.264, 0.35]
+    Xt: [640230000.0, 38100000.0, 0.0]
+    Xc: [370690000.0, 82180000.0, 0]
+    S: [30170000.0, 18970000.0, 6210000.0]
+    m: 10
+    GIc: 61.0
+    GIIc: 101.0
+    alp0: 50.0
+    fvf: 0.57
+    fwf: 0.7450682696347697
+    ply_t: 0.005
+    unit_cost: 1.87
+    waste: 0.05
+    fiber_density: 2535.5
+    area_density_dry: 7.227162215457267
+    component_id: 5
+  -  
     name: carbon_uniax
-    rho: 1220.0
-    E: [114500000000.0, 8390000000.0, 8390000000.0]
-    G: [5990000000.0, 5990000000.0, 5990000000.0]
-    nu: [0.27, 0.27, 0.27]
-    orth: 1
-  - 
+    description: Baseline industry CFRP tested by Sandia National Labs within the BAR Project
+    source: Described in https://doi.org/10.5194/wes-7-19-2022 and https://energy.sandia.gov/download/45350/, RVE analysis
+    orth: 1.0
+    rho: 1600.0
+    E: [157599000000.0, 9100000000.0, 9100000000.0]
+    G: [4131000000.0, 4131000000.0, 2689000000.0]
+    nu: [0.3133, 0.3133, 0.47066]
+    Xt: [1285200000.0, 38100000.0, 0.0]
+    Xc: [878210000.0, 82180000.0, 0.0]
+    S: [30170000.0, 18970000.0, 6210000.0]
+    m: 16.1
+    GIc: 0.0
+    GIIc: 0.0
+    alp0: 0.0
+    fvf: 0.6923076923076923
+    fwf: 0.7788461538461539
+    ply_t: 0.005
+    unit_cost: 20.08
+    waste: 0.05
+    fiber_density: 1800.0
+    area_density_dry: 6.230769230769231
+    component_id: 4
+  -
     name: glass_biax
-    rho: 1845.0
-    E: [13920000000.0, 13920000000.0, 12099010000.0]
-    G: [11500000000.0, 4538640000.0, 4538640000.0]
-    nu: [0.533, 0.275, 0.3329]
-    orth: 1
+    description: (+-45)6 PPG-Devold DB810- E05—a fabric infused with Epikote MGS RIMR 135/Epicure RIMH 1366 epoxy resin
+    source: Described in https://doi.org/10.5194/wes-7-19-2022
+    orth: 1.0
+    rho: 1940.0
+    E: [11023100000.0, 11023100000.0, 16047700000.0]
+    G: [13231400000.0, 3487480000.0, 3487480000.0]
+    nu: [0.688074, 0.117173, 0.117173]
+    Xt: [46210000.0, 46210000.0, 46210000.0]
+    Xc: [70690000.0, 70690000.0, 70690000.0]
+    S: [124460000.0, 18970000.0, 6210000.0]
+    m: 10
+    GIc: 41.0
+    GIIc: 170.0
+    alp0: 45.0
+    fvf: 0.57
+    fwf: 0.7450682696347697
+    ply_t: 0.001
+    waste: 0.15
+    unit_cost: 3.0
+    fiber_density: 2535.5
+    area_density_dry: 1.4454324430914534
+    component_id: 3
+    roll_mass: 181.4368
   - 
     name: glass_triax
-    rho: 1845.0
-    E: [21790000000.0, 14670000000.0, 12099010000.0]
-    G: [9413000000.0, 4538640000.0, 4538640000.0]
-    nu: [0.478, 0.275, 0.3329]
-    orth: 1
+    description: ((±45)(0)2)s Saertex U14EU920-00940-T1300 and Saertex VU-90079-00830-01270—fabrics infused with Vantico TDT 177-155.
+    source: Described in https://doi.org/10.5194/wes-7-19-2022
+    orth: 1.0
+    rho: 1940.0
+    E: [28211400000.0, 16238800000.0, 15835500000.0]
+    G: [8248220000.0, 3491240000.0, 3491240000.0]
+    nu: [0.497511, 0.18091, 0.27481]
+    Xt: [435630000.0, 76440000.0, 0]
+    Xc: [343100000.0, 174710000.0, 0]
+    S: [85060000.0, 18970000.0, 6210000.0]
+    m: 10
+    GIc: 41.0
+    GIIc: 170.0
+    alp0: 45.0
+    fvf: 0.57
+    fwf: 0.7450682696347697
+    ply_t: 0.001
+    unit_cost: 2.86
+    waste: 0.15
+    fiber_density: 2535.5
+    area_density_dry: 1.4454324430914534
+    component_id: 2
+    roll_mass: 181.4368
   - 
     name: balsa
     rho: 110.0
@@ -815,11 +905,40 @@ materials:
     orth: 1
   - 
     name: medium_density_foam
+    description: "Airex C70.130 PVC Foam, source 'https://www.3accorematerials.com/uploads/documents/TDS-AIREX-C70-E_1106.pdf'"
+    source: Described in https://doi.org/10.5194/wes-7-19-2022
+    orth: 0.0
     rho: 130.0
-    E: [129200000.0, 129200000.0, 129200000.0]
-    G: [48946969.7, 48946969.7, 48946969.7]
-    nu: [0.32, 0.32, 0.32]
-    orth: 0
+    E: 142500000.0
+    G: 54000000000.0
+    nu: 0.3194
+    Xt: 2083000.0
+    Xc: 1563000.0
+    S: 1250000.0
+    GIc: 303.0
+    GIIc: 3446.0
+    alp0: 53.0
+    component_id: 1
+    waste: 0.2
+    unit_cost: 13.0
+  - 
+    name: resin
+    description: epoxy
+    source: Described in https://doi.org/10.5194/wes-7-19-2022
+    E: 1000000.0
+    nu: 0.3
+    G: 312500.0
+    GIc: 0.0
+    GIIc: 0.0
+    alp0: 0.0
+    Xt: 0.0
+    Xc: 0.0
+    S: 0.0
+    rho: 1150.0
+    alpha: 0.0
+    orth: 0.0
+    unit_cost: 3.63
+
 assembly: 
   turbine_class: I
   turbulence_class: B
