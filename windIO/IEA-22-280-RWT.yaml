@@ -1,4 +1,14 @@
 name: IEA 22MW Offshore Wind Turbine in Fixed Bottom Configuration
+assembly: 
+  turbine_class: I
+  turbulence_class: B
+  drivetrain: direct_drive
+  rotor_orientation: Upwind
+  number_of_blades: 3
+  hub_height: 170.0
+  rotor_diameter: 280.0
+  rated_power: 22000000.0
+  lifetime: 25.0
 components: 
   blade: 
     outer_shape_bem: 
@@ -990,17 +1000,6 @@ materials:
     alpha: 0.0
     orth: 0.0
     unit_cost: 3.63
-
-assembly: 
-  turbine_class: I
-  turbulence_class: B
-  drivetrain: direct_drive
-  rotor_orientation: Upwind
-  number_of_blades: 3
-  hub_height: 170.0
-  rotor_diameter: 280.0
-  rated_power: 22000000.0
-  lifetime: 25.0
 control: 
   supervisory: 
     Vin: 3.0
