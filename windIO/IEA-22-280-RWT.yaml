@@ -850,8 +850,8 @@ materials:
     GIc: 303
     GIIc: 3446
     alp0: 53
-
-  - name: Adhesive
+  - 
+    name: Adhesive
     orth: 0.0
     rho: 1100.0
     E: 4560000.0
@@ -902,7 +902,6 @@ materials:
     Xy: 485000000.0
     m: 3
     unit_cost: 0.9
-    
   - 
     name: cast_iron
     description: Cast iron for hub and nacelle components
@@ -922,9 +921,7 @@ materials:
     Xy: 265000000.0
     m: 3
     unit_cost: 0.5
-
-
-  -  
+  - 
     name: glass_uniax
     description: Vectorply E-LT-5500, Epikote MGS RIMR 135/Epicure MGS RIMH 1366 epoxy
     source: MSU composites database 3D property tests, desrcibed in https://doi.org/10.5194/wes-7-19-2022
@@ -948,7 +945,7 @@ materials:
     fiber_density: 2535.5
     area_density_dry: 7.227162215457267
     component_id: 5
-  -  
+  - 
     name: carbon_uniax
     description: Baseline industry CFRP tested by Sandia National Labs within the BAR Project
     source: Described in https://doi.org/10.5194/wes-7-19-2022 and https://energy.sandia.gov/download/45350/, RVE analysis
@@ -972,7 +969,7 @@ materials:
     fiber_density: 1800.0
     area_density_dry: 6.230769230769231
     component_id: 4
-  -
+  - 
     name: glass_biax
     description: (+-45)6 PPG-Devold DB810- E05—a fabric infused with Epikote MGS RIMR 135/Epicure RIMH 1366 epoxy resin
     source: Described in https://doi.org/10.5194/wes-7-19-2022
@@ -1029,6 +1026,15 @@ materials:
     G: [16670000.0, 150000000.0, 150000000.0]
     nu: [0.5, 0.013, 0.013]
     orth: 1
+    Xt: 2083000.0
+    Xc: 1563000.0
+    S: 1250000.0
+    GIc: 303.0
+    GIIc: 3446.0
+    alp0: 53.0
+    component_id: 1
+    waste: 0.2
+    unit_cost: 13.0
   - 
     name: medium_density_foam
     description: "Airex C70.130 PVC Foam, source 'https://www.3accorematerials.com/uploads/documents/TDS-AIREX-C70-E_1106.pdf'"
