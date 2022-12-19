@@ -843,6 +843,13 @@ materials:
     ply_t: 0.0005
     waste: 0.25
     unit_cost: 7.23
+    Xt: 74
+    Xc: 87
+    alpha: 0.
+    S: 21260000.0
+    GIc: 303
+    GIIc: 3446
+    alp0: 53
 
   - name: Adhesive
     orth: 0.0
@@ -867,6 +874,56 @@ materials:
     G: 79300000000.0
     nu: 0.265
     orth: 0
+    GIc: 0
+    GIIc: 0
+    alp0: 0
+    Xt: 450000000.0
+    Xc: 450000000.0
+    S: 0
+    Xy: 345000000.0
+    m: 3
+    unit_cost: 0.7
+  - 
+    name: steel_drive
+    description: Steel of the drivetrain ASTM 4140 40Cr1Mo28
+    source: http://www.matweb.com/search/DataSheet.aspx?MatGUID=38108bfd64c44b4c9c6a02af78d5b6c6
+    orth: 0
+    rho: 7850
+    alpha: 0.0
+    E: 205000000000.0
+    nu: 0.3
+    G: 80000000000.0
+    GIc: 0
+    GIIc: 0
+    alp0: 0
+    Xt: 814000000.0
+    Xc: 814000000.0
+    S: 0
+    Xy: 485000000.0
+    m: 3
+    unit_cost: 0.9
+    
+  - 
+    name: cast_iron
+    description: Cast iron for hub and nacelle components
+    source: TODO
+    orth: 0
+    rho: 7200
+    alpha: 0.0
+    E: 118000000000.0
+    nu: 0.3
+    G: 47600000000.0
+    GIc: 0
+    GIIc: 0
+    alp0: 0
+    Xt: 310000000.0
+    Xc: 310000000.0
+    S: 0
+    Xy: 265000000.0
+    m: 3
+    unit_cost: 0.5
+
+
   -  
     name: glass_uniax
     description: Vectorply E-LT-5500, Epikote MGS RIMR 135/Epicure MGS RIMH 1366 epoxy
