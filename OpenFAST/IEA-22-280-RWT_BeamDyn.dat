@@ -1,0 +1,72 @@
+--------- BEAMDYN with OpenFAST INPUT FILE -------------------------------------------
+Generated with AeroElasticSE FAST driver
+---------------------- SIMULATION CONTROL --------------------------------------
+False                  Echo        - Echo input data to "<RootName>.ech" (flag)
+True                   QuasiStaticInit - Use quasistatic pre-conditioning with centripetal accelerations in initialization (flag) [dynamic solve only]
+0                      rhoinf      - Numerical damping parameter for generalized-alpha integrator
+2                      quadrature  - Quadrature method: 1=Gaussian; 2=Trapezoidal (switch)
+DEFAULT                refine      - Refinement factor for trapezoidal quadrature (-). DEFAULT = 1 [used only when quadrature=2]
+DEFAULT                n_fact      - Factorization frequency (-). DEFAULT = 5
+DEFAULT                DTBeam      - Time step size (s).
+DEFAULT                load_retries - Number of factored load retries before quitting the aimulation
+DEFAULT                NRMax       - Max number of iterations in Newton-Ralphson algorithm (-). DEFAULT = 10
+DEFAULT                stop_tol    - Tolerance for stopping criterion (-)
+DEFAULT                tngt_stf_fd - Flag to use finite differenced tangent stiffness matrix (-)
+DEFAULT                tngt_stf_comp - Flag to compare analytical finite differenced tangent stiffness matrix  (-)
+DEFAULT                tngt_stf_pert - perturbation size for finite differencing (-)
+DEFAULT                tngt_stf_difftol - Maximum allowable relative difference between analytical and fd tangent stiffness (-)
+True                   RotStates   - Orient states in the rotating frame during linearization? (flag) [used only when linearizing]
+---------------------- GEOMETRY PARAMETER --------------------------------------
+1                      member_total - Total number of members (-)
+23                     kp_total    - Total number of key points (-) [must be at least 3]
+1 23                               - Member number; Number of key points in this member
+        kp_xr                 kp_yr                 kp_zr             initial_twist    
+         (m)                   (m)                   (m)                  (deg)        
+ 0.00000000000000e+00 -0.00000000000000e+00  5.06754091868944e-12 -2.09439510239320e-01
+ 2.92352696259730e-04 -0.00000000000000e+00  2.73993821947760e+00 -2.09439510239320e-01
+-7.44161333153486e-04 -0.00000000000000e+00  6.84984531465465e+00 -2.09439510239320e-01
+-4.67077246166211e-03 -0.00000000000000e+00  1.36996897714643e+01 -2.09439510239320e-01
+-2.18502622618633e-03 -0.00000000000000e+00  2.05495341141065e+01 -2.09218365198626e-01
+-7.23499779801546e-04 -0.00000000000000e+00  2.73993787739645e+01 -1.88639452607889e-01
+-8.31438825472667e-03 -0.00000000000000e+00  3.42492199933402e+01 -1.50497871868265e-01
+-1.60139986147514e-02 -0.00000000000000e+00  4.10990610474168e+01 -1.28686521371436e-01
+-2.81005972647519e-02 -0.00000000000000e+00  4.79488923093512e+01 -1.09546969540131e-01
+-6.46784018708275e-02 -0.00000000000000e+00  5.47986453980627e+01 -9.04430008570556e-02
+-1.24135511896797e-01 -0.00000000000000e+00  6.16482316727644e+01 -7.06181028149807e-02
+-2.10444326114159e-01 -0.00000000000000e+00  6.84975317119065e+01 -4.81812633041507e-02
+-3.27577877348950e-01 -0.00000000000000e+00  7.53463734175554e+01 -2.41417294477935e-02
+-4.80729085407052e-01 -0.00000000000000e+00  8.21945001653680e+01  3.46471458604507e-04
+-6.76486360800022e-01 -0.00000000000000e+00  8.90415495834143e+01  2.44112460280202e-02
+-9.24702803929898e-01 -0.00000000000000e+00  9.58868954201891e+01  4.68659408512735e-02
+-1.23999642099398e+00 -0.00000000000000e+00  1.02729455725317e+02  6.66893573749725e-02
+-1.64386902853602e+00 -0.00000000000000e+00  1.09567361471536e+02  8.28259687775799e-02
+-2.17449283599337e+00 -0.00000000000000e+00  1.16396532391119e+02  9.40975024021329e-02
+-2.90279449447121e+00 -0.00000000000000e+00  1.23207201100829e+02  9.80684632871415e-02
+-3.98903546265257e+00 -0.00000000000000e+00  1.29969413158105e+02  8.81797482443275e-02
+-4.99498136420735e+00 -0.00000000000000e+00  1.33952757780770e+02  6.82949651338266e-02
+-6.00000000000000e+00 -0.00000000000000e+00  1.36500000000000e+02  4.32710536214636e-02
+---------------------- MESH PARAMETER ------------------------------------------
+10                     order_elem  - Order of interpolation (basis) function (-)
+---------------------- MATERIAL PARAMETER --------------------------------------
+"IEA-22-280-RWT_BeamDyn_Blade.dat" BldFile     - Name of file containing properties for blade (quoted string)
+---------------------- PITCH ACTUATOR PARAMETERS -------------------------------
+False                  UsePitchAct - Whether a pitch actuator should be used (flag)
+0.0                    PitchJ      - Pitch actuator inertia (kg-m^2) [used only when UsePitchAct is true]
+0.0                    PitchK      - Pitch actuator stiffness (kg-m^2/s^2) [used only when UsePitchAct is true]
+0.0                    PitchC      - Pitch actuator damping (kg-m^2/s) [used only when UsePitchAct is true]
+---------------------- OUTPUTS -------------------------------------------------
+False                  SumPrint    - Print summary data to "<RootName>.sum" (flag)
+"ES10.3E2"             OutFmt      - Format used for text tabular output, excluding the time channel.
+0                      NNodeOuts   - Number of nodes to output to file [0 - 9] (-)
+                       OutNd       - Nodes whose values will be output  (-)
+          OutList            - The next line(s) contains a list of output parameters. See OutListParameters.xlsx for a listing of available output channels, (-)
+"RootMxr"
+"RootMyr"
+"RootMzr"
+"TipRDxr"
+"TipRDyr"
+"TipRDzr"
+"TipTDxr"
+"TipTDyr"
+"TipTDzr"
+END of input file (the word "END" must appear in the first 3 columns of this last OutList line)---------------------------------------------------------------------------------------
