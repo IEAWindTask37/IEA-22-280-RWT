@@ -425,7 +425,7 @@ components:
             values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
   hub: 
     diameter: 8.4
-    cone_angle: 0.06981317007977318 # 4 deg
+    cone_angle: 0.06981317007977318
     drag_coefficient: 0.5
     flange_t2shell_t: 6.0
     flange_OD2hub_D: 0.6
@@ -446,14 +446,14 @@ components:
       distance_tt_hub: 5.614
       overhang: 14.0
       drag_coefficient: 0.5
-      lss_diameter: [4.5, 4.5]
-      lss_wall_thickness: [0.27945959035315043, 0.001]
-      nose_diameter: [3.4410808192937536, 2.0262738552472985]
-      nose_wall_thickness: [0.02189858687069129, 0.013136927623628027]
+      lss_diameter: [2.584617518263979, 4.5]
+      lss_wall_thickness: [0.01, 0.018814117380996764]
+      nose_diameter: [2.064617518263979, 2.0312908114939785]
+      nose_wall_thickness: [0.032308759131989453, 0.015645405746989163]
       generator_length: 3.047
       bedplate_wall_thickness:
         grid: [0.0, 0.3333333333333333, 0.6666666666666666, 1.0]
-        values: [0.75, 0.75, 0.75, 0.75]
+        values: [0.1, 0.1, 0.1, 0.1]
       gear_ratio: 1.0
       gearbox_efficiency: 1.0
       mb1Type: CARB
@@ -465,8 +465,8 @@ components:
         grid: [0.66673458, 0.68427487, 0.70181515, 0.71935544, 0.73689573, 0.75443601, 0.77197629, 0.78951658, 0.80705686, 0.82459715, 0.84213744, 0.85967772, 0.877218, 0.89475829, 0.91229857, 0.92983886, 0.94737915, 0.96491943, 0.98245971, 1.0]
         values: [0.953, 0.953, 0.953, 0.953, 0.953, 0.953, 0.953, 0.953, 0.953, 0.953, 0.953, 0.953, 0.953, 0.953, 0.953, 0.953, 0.953, 0.953, 0.953, 0.953]
       generator_mass_user: 508040.0
-      distance_hub_mb: 3.496602401306626
-      distance_mb_mb: 1.2986987889228188
+      distance_hub_mb: 1.8326555998427452
+      distance_mb_mb: 0.8714585547144666
       generator_radius_user: 4.9544
       damping_ratio: 0.005
       brake_mass_user: 0.0
