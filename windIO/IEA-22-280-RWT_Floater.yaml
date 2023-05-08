@@ -450,7 +450,7 @@ components:
       lss_wall_thickness: [0.02, 0.02]
       nose_diameter: [2.1, 2.1]
       nose_wall_thickness: [0.035, 0.035]
-      generator_length: 2.15
+      generator_length: 3.047
       bedplate_wall_thickness:
         grid: [0.0, 0.3333333333333333, 0.6666666666666666, 1.0]
         values: [0.1, 0.1, 0.1, 0.1]
