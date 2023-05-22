@@ -66,12 +66,12 @@ False                  WvSumQTF    - Full summation-frequency  2nd-order wave ki
 0                      DiffQTF     - Full difference-frequency 2nd-order forces computed with full QTF          {0: None; [10, 11, or 12]: WAMIT file to use}          [Only one of MnDrift, NewmanApp, or DiffQTF can be non-zero]
 0                      SumQTF      - Full summation -frequency 2nd-order forces computed with full QTF          {0: None; [10, 11, or 12]: WAMIT file to use}
 ---------------------- PLATFORM ADDITIONAL STIFFNESS AND DAMPING  --------------
-           0.0   AddF0    - Additional preload (N, N-m) [If NBodyMod=1, one size 6*NBody x 1 vector; if NBodyMod>1, NBody size 6 x 1 vectors]
-           0.0   
-           0.0   
-           0.0   
-           0.0   
-           0.0   
+0.0              AddF0    - Additional preload (N, N-m) [If NBodyMod=1, one size 6*NBody x 1 vector; if NBodyMod>1, NBody size 6 x 1 vectors]
+0.0              
+0.0              
+0.0              
+0.0              
+0.0              
            0.0            0.0            0.0            0.0            0.0            0.0   AddCLin  - Additional linear stiffness (N/m, N/rad, N-m/m, N-m/rad)
            0.0            0.0            0.0            0.0            0.0            0.0
            0.0            0.0            0.0            0.0            0.0            0.0
@@ -105,7 +105,7 @@ False                  WvSumQTF    - Full summation-frequency  2nd-order wave ki
 1           NPropSets   - Number of member property sets (-)
  PropSetID     PropD     PropThck  
     (-)         (m)         (m)    
-     1         10.0     0.050656214413711285
+     1         10.0     0.08187267117234107
 ---------------------- SIMPLE HYDRODYNAMIC COEFFICIENTS (model 1) --------------
   SimplCd    SimplCdMG    SimplCa    SimplCaMG    SimplCp    SimplCpMG   SimplAxCd  SimplAxCdMG  SimplAxCa  SimplAxCaMG  SimplAxCp  SimplAxCpMG
     (-)         (-)         (-)         (-)         (-)         (-)         (-)         (-)         (-)         (-)         (-)         (-)    
