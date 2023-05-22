@@ -615,19 +615,19 @@ components:
                 bulkhead:
                     material: steel
                     thickness:
-                        grid: [0.0, 0.05, 0.35, 1.0]
-                        values: [0.05, 0.05, 0.05, 0.05]
+                        grid: [0.0, 0.35, 1.0]
+                        values: [0.05, 0.05, 0.05]
                 ring_stiffeners: {material: steel, flange_thickness: 0.1, flange_width: 0.2, web_height: 0.2, web_thickness: 0.1, spacing: 0.083333}
                 longitudinal_stiffeners: {material: steel, flange_thickness: 0.1, flange_width: 0.2, web_height: 0.2, web_thickness: 0.1, spacing: 0.52359}
                 ballasts:
-                    -  
-                      variable_flag: false
-                      material: slurry
-                      volume: 1.2223758659488595e-16
-                      grid: [0.0, 0.05]
+                    # -  
+                    #   variable_flag: false
+                    #   material: slurry
+                    #   volume: 1.2223758659488595e-16
+                    #   grid: [0.0, 0.05]
                     -  
                       variable_flag: true
-                      grid: [0.05, 0.35]
+                      grid: [0.00, 0.35]
                 outfitting_factor: 1.0
             axial_joints:
                 -  {name: col1_upper_pontoon, grid: 0.987}
