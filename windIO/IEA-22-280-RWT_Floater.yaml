@@ -1067,8 +1067,8 @@ materials:
     ply_t: 0.0005
     waste: 0.25
     unit_cost: 7.23
-    Xt: 74
-    Xc: 87
+    Xt: 74.e+6
+    Xc: 87.e+6
     alpha: 0.
     S: 21260000.0
     GIc: 303
