@@ -1076,8 +1076,8 @@ environment:
   soil_shear_modulus: 140000000.0
   soil_poisson: 0.4
   water_depth: 34.0
-  significant_wave_height: 4.52
-  significant_wave_period: 9.45
+  significant_wave_height: 7.6
+  significant_wave_period: 13.
   gravity: 9.80665
   air_pressure: 103500.0
   air_vapor_pressure: 1700.0
