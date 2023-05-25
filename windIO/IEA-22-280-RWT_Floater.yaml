@@ -1302,7 +1302,7 @@ control:
     VS_minspd: 0.20682151636132806
     VS_maxspd: 0.7500028861670033
     VS_zeta: 1.0
-    VS_omega: 0.2
+    VS_omega: 0.7
     max_torque_rate: 1500000.0
   pitch:
     PC_zeta: 1.0
