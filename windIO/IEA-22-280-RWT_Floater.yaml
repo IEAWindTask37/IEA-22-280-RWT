@@ -509,7 +509,7 @@ components:
       joints:
           -  
             name: main_keel
-            location: [0.0, 0.0, -24.240273174506722]
+            location: [0.0, 0.0, -25.0]
             transition: false
             cylindrical: false
           -  
@@ -519,32 +519,32 @@ components:
             cylindrical: false
           -  
             name: col1_keel
-            location: [64.9217819800838, 3.14159265, -24.240273174506722]
+            location: [65.0, 3.14159265, -25.0]
             cylindrical: true
             transition: false
           -  
             name: col1_freeboard
-            location: [64.9217819800838, 3.14159265, 15.0]
+            location: [65.0, 3.14159265, 15.0]
             cylindrical: true
             transition: false
           -  
             name: col2_keel
-            location: [64.9217819800838, 1.0471976, -24.240273174506722]
+            location: [65.0, 1.0471976, -25.0]
             cylindrical: true
             transition: false
           -  
             name: col2_freeboard
-            location: [64.9217819800838, 1.0471975, 15.0]
+            location: [65.0, 1.0471975, 15.0]
             cylindrical: true
             transition: false
           -  
             name: col3_keel
-            location: [64.9217819800838, -1.0471976, -24.240273174506722]
+            location: [65.0, -1.0471976, -25.0]
             cylindrical: true
             transition: false
           -  
             name: col3_freeboard
-            location: [64.9217819800838, -1.0471976, 15.0]
+            location: [65.0, -1.0471976, 15.0]
             cylindrical: true
             transition: false
           -  
@@ -606,7 +606,7 @@ components:
                 shape: circular
                 outer_diameter:
                     grid: [0.0, 1.0]
-                    values: [12.391498755751039, 12.391498755751039]
+                    values: [12.5, 12.5]
             internal_structure: &id005
                 layers:
                     -  
