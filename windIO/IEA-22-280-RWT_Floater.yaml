@@ -552,7 +552,8 @@ components:
             location: [837.8, 3.14159265, -200.0]
             cylindrical: true
             transition: false
-          -  name: anchor2
+          -  
+            name: anchor2
             location: [837.8, 1.0471976, -200.0]
             cylindrical: true
             transition: false
