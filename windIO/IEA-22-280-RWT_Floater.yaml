@@ -527,11 +527,13 @@ components:
             location: [64.9217819800838, 3.14159265, 15.0]
             cylindrical: true
             transition: false
-          -  name: col2_keel
+          -  
+            name: col2_keel
             location: [64.9217819800838, 1.0471976, -24.240273174506722]
             cylindrical: true
             transition: false
-          -  name: col2_freeboard
+          -  
+            name: col2_freeboard
             location: [64.9217819800838, 1.0471975, 15.0]
             cylindrical: true
             transition: false
@@ -747,22 +749,6 @@ components:
             Ca: 1.0
             Cd: 0.8
             Cp: 0.0
-  mooring:
-      nodes:
-          -  {name: line1_anchor, node_type: fixed, joint: anchor1, anchor_type: drag_embedment, fairlead_type: rigid, node_mass: 0.0, node_volume: 0.0, drag_area: 0.0, added_mass: 0.0}
-          -  {name: line2_anchor, node_type: fixed, joint: anchor2, anchor_type: drag_embedment, fairlead_type: rigid, node_mass: 0.0, node_volume: 0.0, drag_area: 0.0, added_mass: 0.0}
-          -  {name: line3_anchor, node_type: fixed, joint: anchor3, anchor_type: drag_embedment, fairlead_type: rigid, node_mass: 0.0, node_volume: 0.0, drag_area: 0.0, added_mass: 0.0}
-          -  {name: line1_vessel, node_type: vessel, joint: col1_fairlead, fairlead_type: rigid, anchor_type: none, node_mass: 0.0, node_volume: 0.0, drag_area: 0.0, added_mass: 0.0}
-          -  {name: line2_vessel, node_type: vessel, joint: col2_fairlead, fairlead_type: rigid, anchor_type: none, node_mass: 0.0, node_volume: 0.0, drag_area: 0.0, added_mass: 0.0}
-          -  {name: line3_vessel, joint: col3_fairlead, node_type: vessel, fairlead_type: rigid, anchor_type: none, node_mass: 0.0, node_volume: 0.0, drag_area: 0.0, added_mass: 0.0}
-      lines:
-          -  {name: line1, node1: line1_anchor, node2: line1_vessel, line_type: main, unstretched_length: 837.0}
-          -  {name: line2, node1: line2_anchor, node2: line2_vessel, line_type: main, unstretched_length: 837.0}
-          -  {name: line3, node1: line3_anchor, node2: line3_vessel, line_type: main, unstretched_length: 837.0}
-      line_types:
-          -  {name: main, diameter: 0.225, type: chain, transverse_added_mass: 1.0, tangential_added_mass: 0.0, transverse_drag: 1.6, tangential_drag: 0.1, damping: 0.0}
-      anchor_types:
-          -  {name: drag_embedment, type: drag_embedment}
   mooring:
       nodes:
           -  {name: line1_anchor, node_type: fixed, joint: anchor1, anchor_type: drag_embedment, fairlead_type: rigid, node_mass: 0.0, node_volume: 0.0, drag_area: 0.0, added_mass: 0.0}
