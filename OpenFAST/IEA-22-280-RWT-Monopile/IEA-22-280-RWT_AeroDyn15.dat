@@ -45,41 +45,41 @@ True                   FLookup     - Flag to indicate whether a lookup for f' wi
 4                      InCol_Cm    - The column in the airfoil tables that contains the pitching-moment coefficient; use zero if there is no Cm column (-)
 0                      InCol_Cpmin - The column in the airfoil tables that contains the Cpmin coefficient; use zero if there is no Cpmin column (-)
 30                     NumAFfiles  - Number of airfoil files used (-)
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_00.dat"    AFNames            - Airfoil file names (NumAFfiles lines) (quoted strings)
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_01.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_02.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_03.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_04.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_05.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_06.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_07.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_08.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_09.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_10.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_11.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_12.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_13.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_14.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_15.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_16.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_17.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_18.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_19.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_20.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_21.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_22.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_23.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_24.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_25.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_26.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_27.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_28.dat"
-"Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_29.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_00.dat"    AFNames            - Airfoil file names (NumAFfiles lines) (quoted strings)
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_01.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_02.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_03.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_04.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_05.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_06.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_07.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_08.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_09.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_10.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_11.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_12.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_13.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_14.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_15.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_16.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_17.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_18.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_19.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_20.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_21.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_22.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_23.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_24.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_25.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_26.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_27.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_28.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_29.dat"
 ======  Rotor/Blade Properties  =====================================================================
 True                   UseBlCm     - Include aerodynamic pitching moment in calculations?  (flag)
-"IEA-22-280-RWT_AeroDyn15_blade.dat" ADBlFile(1) - Name of file containing distributed aerodynamic properties for Blade #1 (-)
-"IEA-22-280-RWT_AeroDyn15_blade.dat" ADBlFile(2) - Name of file containing distributed aerodynamic properties for Blade #2 (-) [unused if NumBl < 2]
-"IEA-22-280-RWT_AeroDyn15_blade.dat" ADBlFile(3) - Name of file containing distributed aerodynamic properties for Blade #3 (-) [unused if NumBl < 3]
+"../IEA-22-280-RWT/IEA-22-280-RWT_AeroDyn15_blade.dat" ADBlFile(1) - Name of file containing distributed aerodynamic properties for Blade #1 (-)
+"../IEA-22-280-RWT/IEA-22-280-RWT_AeroDyn15_blade.dat" ADBlFile(2) - Name of file containing distributed aerodynamic properties for Blade #2 (-) [unused if NumBl < 2]
+"../IEA-22-280-RWT/IEA-22-280-RWT_AeroDyn15_blade.dat" ADBlFile(3) - Name of file containing distributed aerodynamic properties for Blade #3 (-) [unused if NumBl < 3]
 ======  Hub Properties ============================================================================== [used only when Buoyancy=True]
 0                      VolHub      - Hub volume (m^3)
 0                      HubCenBx    - Hub center of buoyancy x direction offset (m)
