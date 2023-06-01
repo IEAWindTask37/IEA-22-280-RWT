@@ -5,7 +5,7 @@ import unittest
 
 # Paths to files  
 local_dir = os.path.dirname( os.path.realpath(__file__) )
-BDtw_path = os.path.join(local_dir, '../OpenFAST')
+BDtw_path = os.path.join(local_dir, '../OpenFAST/IEA-22-280-RWT')
 # BDc2_path = os.path.join(local_dir, '../HAWC2/converted/')
 #h2_path_FPM = os.path.join(local_dir, '../HAWC2/IEA-15-240-RWT-FixedBottom/data/blade_beamdyn_c2_FPM.st')
 #h2_path_noFPM = os.path.join(local_dir, '../HAWC2/IEA-15-240-RWT-FixedBottom/data/blade_beamdyn_c2_noFPM.st')
