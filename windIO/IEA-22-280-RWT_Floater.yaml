@@ -473,9 +473,6 @@ components:
       hvac_mass_coefficient: 0.025
       converter_mass_user: 0.0
       transformer_mass_user: 0.0
-      bedplate_flange_width: 1.0
-      bedplate_flange_thickness: 0.05
-      bedplate_web_thickness: 0.05
   tower: 
     outer_shape_bem: 
       reference_axis: &tower_axis
