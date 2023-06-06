@@ -442,7 +442,7 @@ components:
     spinner_material: glass_uniax
   nacelle:
     drivetrain:
-      uptilt: 0.1047197551196598 # 6 deg
+      uptilt: 0.1047197551196598
       distance_tt_hub: 5.614
       overhang: 14.0
       drag_coefficient: 0.5
