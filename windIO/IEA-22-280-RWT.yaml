@@ -440,6 +440,9 @@ components:
     spinner_gust_ws: 70.0
     hub_material: cast_iron
     spinner_material: glass_uniax
+    elastic_properties_mb:
+      system_mass: 131293.36809765798
+      system_inertia: [2049657.307159771, 1305740.4947308905, 1305740.4947308905, 0.0, 0.0, 0.0]
   nacelle:
     drivetrain:
       uptilt: 0.1047197551196598
@@ -473,6 +476,12 @@ components:
       hvac_mass_coefficient: 0.025
       converter_mass_user: 0.0
       transformer_mass_user: 0.0
+      elastic_properties_mb:
+        system_mass: 845409.6482639315
+        yaw_mass: 37542.77277724435
+        system_inertia: [12495314.032290645, 16215164.009113628, 16777550.993952524, 848352.5106933172, 3471103.8945002914, -305287.4309320898]
+        system_inertia_tt: [27154905.84666021, 58085396.840806544, 44041039.26128982, -1.1641532182693481e-10, 23435185.33832737, 316533.5633256645]
+        system_center_mass: [-5.676054421863411, -0.1767919958649313, 4.160404736917379]
   tower:
     outer_shape_bem:
       reference_axis: &id003
