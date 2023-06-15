@@ -1,0 +1,69 @@
+path_params: {FAST_InputFile: IEA-22-280-RWT-Semi.fst, FAST_directory: ., rotor_performance_filename: IEA-22-280-RWT-Semi_Cp_Ct_Cq.txt}
+controller_params:
+    flag: true
+    PS_Mode: 3
+    ps_percent: 0.9
+    Fl_Mode: 1
+    zeta_pc: [1.4662448526479779, 2.030062512228778, 1.8130068579395848]
+    omega_pc: [0.11468384902891134, 0.12082643062647291, 0.3959805145442727]
+    U_pc: [12, 18, 24]
+    zeta_vs: 0.85
+    omega_vs: 0.12
+    twr_freq: 1.4799073778145184
+    ptfm_freq: 0.2717484204906427
+    Kp_float: -0.1477808226207514
+    PA_Mode: 2
+    PA_CornerFreq: 6.2831
+    PA_Damping: 0.707
+    DISCON:
+        PS_BldPitchMin_N: 58
+        PS_WindSpeeds: [3.0, 3.29360265, 3.5872053, 3.88080796, 4.17441061, 4.46801326, 4.76161591, 5.05521857, 5.34882122, 5.64242387, 5.93602652, 6.22962918, 6.52323183, 6.81683448, 7.11043713, 7.40403979, 7.69764244, 7.99124509, 8.28484774, 8.5784504, 8.87205305, 9.1656557, 9.45925835, 9.75286101, 10.04646366, 10.92727162, 11.22087427, 11.51447692, 11.96399436, 12.41351179, 12.86302923, 13.31254666, 13.7620641, 14.21158154, 14.66109897, 15.11061641, 15.56013384, 16.00965128, 16.45916872, 16.90868615, 17.35820359, 17.80772102, 18.25723846, 18.7067559, 19.15627333, 19.60579077, 20.0553082, 20.50482564, 20.95434308, 21.40386051, 21.85337795, 22.30289538, 22.75241282, 23.20193026, 23.65144769, 24.10096513, 24.55048256, 25.0]
+        PS_BldPitchMin: [-0.00065191, -0.00172798, -0.00280406, -0.00388014, -0.00513522, -0.00651263, -0.00789004, -0.00933104, -0.01104653, -0.01276203, -0.01447752, -0.01615941, -0.01783194, -0.01950447, -0.02117693, -0.02284929, -0.02369925, -0.02414993, -0.02416628, -0.02414522, -0.02405818, -0.02372649, -0.02320584, -0.01654309, -0.01010173, 0.00066102, 0.01075383, 0.01817053, 0.02902197, 0.03947062, 0.0491835, 0.05859661, 0.06785552, 0.07686448, 0.08554799, 0.09415452, 0.10270415, 0.11101581, 0.11918053, 0.12731668, 0.13543878, 0.14334088, 0.15114025, 0.15893091, 0.16672357, 0.17434688, 0.18184741, 0.18935759, 0.196885, 0.20433381, 0.21156859, 0.2188274, 0.22611498, 0.23343543, 0.2404792, 0.24751719, 0.25459085, 0.2617018]
+        DLL_FileName: unused
+        DLL_InFile: unused
+        DLL_ProcName: DISCON
+    LoggingLevel: 1
+    F_LPFType: 1
+    F_NotchType: 0
+    IPC_ControlMode: 0
+    VS_ControlMode: 2
+    PC_ControlMode: 1
+    Y_ControlMode: 0
+    SS_Mode: 1
+    WE_Mode: 2
+    SD_Mode: 0
+    TD_Mode: 0
+    Flp_Mode: 0
+    PwC_Mode: 0
+    ZMQ_Mode: 0
+    Ext_Mode: 0
+    interp_type: sigma
+    max_pitch: 1.57
+    min_pitch: 0.0
+    vs_minspd: 0.0
+    ss_vsgain: 1.0
+    ss_pcgain: 0.001
+    sd_maxpit: 0.6981
+    flp_maxpit: 0.1745
+    WS_GS_n: 60
+    PC_GS_n: 30
+    tune_Fl: false
+    max_torque_factor: 1.1
+    IPC_Kp1p: 0.0
+    IPC_Kp2p: 0.0
+    IPC_Ki1p: 0.0
+    IPC_Ki2p: 0.0
+    IPC_Vramp: [0.0, 0.0]
+    filter_params: {f_we_cornerfreq: 0.20944, f_fl_highpassfreq: 0.01042, f_ss_cornerfreq: 0.6283, f_yawerr: 0.17952, f_sd_cornerfreq: 0.41888}
+    open_loop: {flag: false, filename: unused, OL_Ind_Breakpoint: 1, OL_Ind_BldPitch: 0, OL_Ind_GenTq: 0, OL_Ind_YawRate: 0}
+    tuning_yaml: none
+    linmodel_tuning:
+        type: none
+        linfile_path: none
+        lintune_outpath: lintune_outfiles
+        load_parallel: false
+        stability_margin: 0.1
+        omega_pc: {}
+    omega_flp: 0.0
+    zeta_flp: 0.0
+turbine_params: {rotor_inertia: 749154917.0, rated_rotor_speed: 0.74625043, v_min: 3.0, v_rated: 11.51447692, v_max: 25.0, max_pitch_rate: 0.03490659, max_torque_rate: 4500000.0, rated_power: 22000000.0, bld_edgewise_freq: 3.6531113561725572, bld_flapwise_freq: 2.7716172770411616, TSR_operational: 9.56}
