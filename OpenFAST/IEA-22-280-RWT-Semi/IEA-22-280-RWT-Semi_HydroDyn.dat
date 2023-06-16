@@ -94,7 +94,7 @@ False                  WvSumQTF    - Full summation-frequency  2nd-order wave ki
 1                      NAxCoef     - Number of axial coefficients (-)
  AxCoefID      AxCd        AxCa        AxCp    
     (-)         (-)         (-)         (-)    
-     1          0.0         0.0         1.0    
+     1          4.0         0.0         1.0    
 ---------------------- MEMBER JOINTS -------------------------------------------
 20                     NJoints     - Number of joints (-)   [must be exactly 0 or at least 2]
   JointID     Jointxi     Jointyi     Jointzi    JointAxID  JointOvrlp   ! [JointOvrlp= 0: do nothing at joint, 1: eliminate overlaps by calculating super member]
