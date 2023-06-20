@@ -62,15 +62,15 @@ True                   CBMod       - [T/F] If True perform C-B reduction, else f
 9                      NPropSets   - Number of structurally unique x-sections (i.e. how many groups of X-sectional properties are utilized throughout all of the members)
  PropSetID    YoungE      ShearG1     MatDens      XsecD       XsecT   
     (-)       (N/m2)      (N/m2)      (kg/m3)       (m)         (m)    
-     1      2.000000e+11 7.930000e+10   7850.0       10.0     0.08187267117234107
-     2      2.000000e+11 7.930000e+10   7850.0       10.0     0.07969991231945338
-     3      2.000000e+11 7.930000e+10   7850.0       10.0     0.07752313510864596
-     4      2.000000e+11 7.930000e+10 7850.000000000001    10.0     0.07534273344898798
-     5      2.000000e+11 7.930000e+10   7850.0       10.0     0.07315887953501052
-     6      2.000000e+11 7.930000e+10   7850.0       10.0     0.07060705115952186
-     7      2.000000e+11 7.930000e+10   7850.0       10.0     0.06804759060447388
-     8      2.000000e+11 7.930000e+10   7850.0       10.0     0.06659197838411503
-     9      2.000000e+11 7.930000e+10   7850.0       10.0     0.06413968144964294
+     1      2.000000e+11 7.930000e+10   7850.0       10.0     0.09533977250267744
+     2      2.000000e+11 7.930000e+10 7849.999999999999    10.0     0.09263343314114122
+     3      2.000000e+11 7.930000e+10   7850.0       10.0     0.08993895493800726
+     4      2.000000e+11 7.930000e+10   7850.0       10.0     0.08725742036593341
+     5      2.000000e+11 7.930000e+10   7850.0       10.0     0.08458448424912726
+     6      2.000000e+11 7.930000e+10   7850.0       10.0     0.08147613515866627
+     7      2.000000e+11 7.930000e+10   7850.0       10.0     0.07836666881506077
+     8      2.000000e+11 7.930000e+10   7850.0       10.0     0.07664968521980355
+     9      2.000000e+11 7.930000e+10 7850.000000000001    10.0     0.07377227647068994
 ------------------ MEMBER X-SECTION PROPERTY data 2/2 [isotropic material for now: use this table if any section other than circular, however provide COSM(i,j) below] ------------------------
 0                      NXPropSets  - Number of structurally unique non-circular x-sections (if 0 the following table is ignored)
  PropSetID    YoungE      ShearG2     MatDens      XsecA      XsecAsx     XsecAsy     XsecJxx     XsecJyy     XsecJ0   
