@@ -57,15 +57,14 @@ jobs:
         shell: bash -l {0}
         run: |
           cd OpenFAST/IEA-22-280-RWT-Monopile
-          sed --separate --in-place=BAK 's/300.0 \{1,\} TMax/10.0    TMax/' IEA-22-280-RWT-Monopile.fst
           openfast IEA-22-280-RWT-Monopile.fst
 
       # Run OpenFAST floating
-      #- name: Run OpenFAST floating
-      #  shell: bash -l {0}
-      #  run: |
-      #    cd OpenFAST/IEA-15-240-RWT-UMaineSemi
-      #    openfast IEA-15-240-RWT-UMaineSemi.fst
+      - name: Run OpenFAST floating
+        shell: bash -l {0}
+        run: |
+          cd OpenFAST/IEA-22-280-RWT-Semi
+          openfast IEA-22-280-RWT-Semi.fst
 
       # Run OpenFAST monopile-DTU
       #- name: Run OpenFAST fixed-bottom with DTU controller

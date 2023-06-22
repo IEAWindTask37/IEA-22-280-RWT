@@ -6,9 +6,9 @@ default                DT          - Communication interval for controllers (s) 
 ---------------------- PITCH CONTROL -------------------------------------------
 5                      PCMode      - Pitch control mode {0: none, 3: user-defined from routine PitchCntrl, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
 0.0                    TPCOn       - Time to enable active pitch control (s) [unused when PCMode=0]
-9999                   TPitManS(1) - Time to start override pitch maneuver for blade 1 and end standard pitch control (s)
-9999                   TPitManS(2) - Time to start override pitch maneuver for blade 2 and end standard pitch control (s)
-9999                   TPitManS(3) - Time to start override pitch maneuver for blade 3 and end standard pitch control (s) [unused for 2 blades]
+99999.0                TPitManS(1) - Time to start override pitch maneuver for blade 1 and end standard pitch control (s)
+99999.0                TPitManS(2) - Time to start override pitch maneuver for blade 2 and end standard pitch control (s)
+99999.0                TPitManS(3) - Time to start override pitch maneuver for blade 3 and end standard pitch control (s) [unused for 2 blades]
 2.0                    PitManRat(1) - Pitch rate at which override pitch maneuver heads toward final pitch angle for blade 1 (deg/s)
 2.0                    PitManRat(2) - Pitch rate at which override pitch maneuver heads toward final pitch angle for blade 2 (deg/s)
 2.0                    PitManRat(3) - Pitch rate at which override pitch maneuver heads toward final pitch angle for blade 3 (deg/s) [unused for 2 blades]
@@ -52,8 +52,8 @@ True                   GenTiStp    - Method to stop the generator {T: timed usin
 0                      YCMode      - Yaw control mode {0: none, 3: user-defined from routine UserYawCont, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
 99999.0                TYCOn       - Time to enable active yaw control (s) [unused when YCMode=0]
 0.0                    YawNeut     - Neutral yaw position--yaw spring force is zero at this yaw (degrees)
-7852142278.145076      YawSpr      - Nacelle-yaw spring constant (N-m/rad)
-106116671.83848867     YawDamp     - Nacelle-yaw damping constant (N-m/(rad/s))
+7852142278.22828       YawSpr      - Nacelle-yaw spring constant (N-m/rad)
+5632018.966297348      YawDamp     - Nacelle-yaw damping constant (N-m/(rad/s))
 99999.0                TYawManS    - Time to start override yaw maneuver and end standard yaw control (s)
 0.25                   YawManRat   - Yaw maneuver rate (in absolute value) (deg/s)
 0.0                    NacYawF     - Final yaw angle for override yaw maneuvers (degrees)
@@ -74,7 +74,7 @@ True                   GenTiStp    - Method to stop the generator {T: timed usin
 ---------------------- CABLE CONTROL ---------------------------------------- 
 0                      CCmode      - Cable control mode {0- none, 4- user-defined from Simulink/Labview, 5- user-defineAfC_phased from Bladed-style DLL}
 ---------------------- BLADED INTERFACE ---------------------------------------- [used only with Bladed Interface]
-"/Users/dzalkind/Tools/WEIS-1/build/temp.macosx-10.9-x86_64-cpython-310_rosco/libdiscon.dylib" DLL_FileName - Name/location of the dynamic library {.dll [Windows] or .so [Linux]} in the Bladed-DLL format (-) [used only with Bladed Interface]
+"/usr/share/miniconda3/envs/test/lib/libdiscon.so"  DLL_FileName - Name/location of the dynamic library {.dll [Windows] or .so [Linux]} in the Bladed-DLL format (-) [used only with Bladed Interface]
 "IEA-22-280-RWT-Semi_DISCON.IN" DLL_InFile  - Name of input file sent to the DLL (-) [used only with Bladed Interface]
 "DISCON"               DLL_ProcName - Name of procedure in DLL to be called (-) [case sensitive; used only with DLL Interface]
 default                DLL_DT      - Communication interval for dynamic library (s) (or "default") [used only with Bladed Interface]

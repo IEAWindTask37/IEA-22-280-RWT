@@ -3,7 +3,7 @@ Generated with AeroElasticSE FAST driver
 ---------------------- SIMULATION CONTROL --------------------------------------
 False                  Echo        - Echo input data to <RootName>.ech (flag)
 "FATAL"                AbortLevel  - Error level when simulation should abort (string) {"WARNING", "SEVERE", "FATAL"}
-720.0                  TMax        - Total run time (s)
+30.0                  TMax        - Total run time (s)
 0.01                   DT          - Recommended module time step (s)
 2                      InterpOrder - Interpolation order for input/output time history (-) {1=linear, 2=quadratic}
 1                      NumCrctn    - Number of correction iterations (-) {0=explicit calculation, i.e., no corrections}
@@ -31,10 +31,10 @@ False                  Echo        - Echo input data to <RootName>.ech (flag)
 0                      MSL2SWL     - Offset between still-water level and mean sea level (m) [positive upward]
 ---------------------- INPUT FILES ---------------------------------------------
 "IEA-22-280-RWT-Semi_ElastoDyn.dat" EDFile      - Name of file containing ElastoDyn input parameters (quoted string)
-"none"                 BDBldFile(1) - Name of file containing BeamDyn input parameters for blade 1 (quoted string)
-"none"                 BDBldFile(2) - Name of file containing BeamDyn input parameters for blade 2 (quoted string)
-"none"                 BDBldFile(3) - Name of file containing BeamDyn input parameters for blade 3 (quoted string)
-"IEA-22-280-RWT-Semi_InflowFile.dat" InflowFile  - Name of file containing inflow wind input parameters (quoted string)
+"../IEA-22-280-RWT/IEA-22-280-RWT_BeamDyn.dat"  BDBldFile(1) - Name of file containing BeamDyn input parameters for blade 1 (quoted string)
+"../IEA-22-280-RWT/IEA-22-280-RWT_BeamDyn.dat"  BDBldFile(2) - Name of file containing BeamDyn input parameters for blade 2 (quoted string)
+"../IEA-22-280-RWT/IEA-22-280-RWT_BeamDyn.dat"  BDBldFile(3) - Name of file containing BeamDyn input parameters for blade 3 (quoted string)
+"../IEA-22-280-RWT/IEA-22-280-RWT_InflowFile.dat" InflowFile  - Name of file containing inflow wind input parameters (quoted string)
 "IEA-22-280-RWT-Semi_AeroDyn15.dat" AeroFile    - Name of file containing aerodynamic input parameters (quoted string)
 "IEA-22-280-RWT-Semi_ServoDyn.dat" ServoFile   - Name of file containing control and electrical-drive input parameters (quoted string)
 "IEA-22-280-RWT-Semi_HydroDyn.dat" HydroFile   - Name of file containing hydrodynamic input parameters (quoted string)
