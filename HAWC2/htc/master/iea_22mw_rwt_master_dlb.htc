@@ -158,7 +158,7 @@ begin new_htc_structure;
     type timoschenko;
     nbodies 29;
     node_distribution c2_def;
-    damping_aniso_v2   0.0 0.0 0.0 0.0041 0.003 0.007  ; tuned to 0.5% critical damping on first 2 modes	
+    damping_aniso_v2   0.0 0.0 0.0 0.00303 0.00417 0.00072  ; tuned to 0.5% critical damping on first flap/edge modes and 2% on first torsion
     begin timoschenko_input; 
       filename ./data/IEA-22MW_blade1_st.dat;
       set 1 1;
@@ -428,7 +428,7 @@ begin dll;
     arraysizes_update 100 100;
     begin init; 
       ;  Overall parameters
-      constant 1 22000.0; Rated power [kW]
+     constant 1 22000.0; Rated power [kW]
       constant 2 0.19337770030518872; Minimum rotor (LSS) speed [rad/s]
       constant 3 0.7394366188733804; Rated rotor (LSS) speed [rad/s]
       constant 4 44628000.0; Maximum allowable generator torque [Nm]   ; 150% of max torque
@@ -441,20 +441,20 @@ begin dll;
       constant 9 0.7; Damping ratio of speed filter [-]
       constant 10 0.0; Frequency of free-free DT torsion mode [Hz], if zero no notch filter used
       ; Partial load control parameters
-      constant 11 0.696668E+08; Optimal Cp tracking K factor [Nm/(rad/s)^2], ;
+      constant 11 0.696242E+08; Optimal Cp tracking K factor [Nm/(rad/s)^2], ;
       ; Qg=K*Omega^2, K=eta*0.5*rho*A*Cp_opt*R^3/lambda_opt^3
       constant 12 0.182316E+09; Proportional gain of torque controller [Nm/(rad/s)]
-      constant 13 0.245469E+08; Integral gain of torque controller [Nm/rad]
+      constant 13 0.245470E+08; Integral gain of torque controller [Nm/rad]
       constant 14 0.0; Differential gain of torque controller [Nm/(rad/s^2)]
       ;     Full load control parameters
       constant 15 0.9; Generator control switch [1=constant power, 0=constant torque]
-      constant 16 0.112420E+01; Proportional gain of pitch controller [rad/(rad/s)]
-      constant 17 0.122899E+00; Integral gain of pitch controller [rad/rad]
+      constant 16 0.112727E+01; Proportional gain of pitch controller [rad/(rad/s)]
+      constant 17 0.123206E+00; Integral gain of pitch controller [rad/rad]
       constant 18 0.0; Differential gain of pitch controller [rad/(rad/s^2)]
       constant 19 4e-09; Proportional power error gain [rad/W]
       constant 20 4e-09; Integral power error gain [rad/(Ws)]
-      constant 21 11.99126; Coefficient of linear term in aerodynamic gain scheduling, KK1 [deg]
-      constant 22 546.21333; Coefficient of quadratic term in aerodynamic gain scheduling, KK2 [deg^2] &
+      constant 21 11.85400; Coefficient of linear term in aerodynamic gain scheduling, KK1 [deg]
+      constant 22 551.28673; Coefficient of quadratic term in aerodynamic gain scheduling, KK2 [deg^2] &
       ; (if zero, KK1 = pitch angle at double gain)
       constant 23 1.5; Relative speed for double nonlinear gain [-]
       ;     Cut-in simulation parameters
