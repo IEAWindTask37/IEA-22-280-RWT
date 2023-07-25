@@ -9,21 +9,11 @@ from ROSCO_toolbox.tune import yaml_to_objs
 import matplotlib.pyplot as plt
 from ROSCO_toolbox.ofTools.util.FileTools import save_yaml
 from ROSCO_toolbox.inputs.validation import load_rosco_yaml
+import pandas as pd
 
 
 
 # Add DTU min pitch values
-dtu_min_pitch_table = np.array([[3.0 ,-3.735157000000000060e-02],
-  [4.0 ,-2.473450899999999897e-01],
-  [5.0 ,-5.161431699999999845e-01],
-  [6.0 ,-8.509175900000000015e-01],
-  [7.0 ,-1.177307050000000022e+00],
-  [7.5 ,-1.340484919999999969e+00],
-  [8.0 ,-1.384459139999999921e+00],
-  [8.5 ,-1.384752090000000102e+00],
-  [9.0 ,-1.376258610000000049e+00],
-  [9.5 ,-1.325457069999999904e+00],
-  [10.0, -5.787865500000000107e-01]])
 
 
 if __name__=="__main__":
@@ -40,6 +30,10 @@ if __name__=="__main__":
         'IEA-22-280-RWT-Monopile/IEA-22-280-RWT-Monopile.yaml',
         'IEA-22-280-RWT-Semi/IEA-22-280-RWT-Semi.yaml',
     ]
+
+    # Get DTU min pitch
+    df_minpitch = pd.read_csv(os.path.join(of_dir,'../HAWC2/control/wpdata.100'),sep=' ',header=None)
+    dtu_min_pitch_table = df_minpitch.iloc[1:15,0:2].to_numpy()
 
     for yaml in iea22_yamls:
         yaml_file = os.path.join(of_dir,yaml)
@@ -66,9 +60,15 @@ if __name__=="__main__":
 
        
         ax.plot(controller.v, controller.ps_min_bld_pitch, label='Updated Pitch Schedule',linestyle='--')
-        ax.legend()
         ax.set_xlabel('Wind speed (m/s)')
         ax.set_ylabel('Blade pitch (rad)')
+
+        df = pd.read_csv('/Users/dzalkind/Downloads/initial_conditions (1).dat',sep=' ',header=None)
+
+        ax.plot(df[0],np.radians(df[1]), label='DTU Initial Conditions',linestyle=':')
+
+        ax.legend()
+
         plt.savefig(os.path.join(this_dir,os.path.split(yaml)[0]+'.peakshave.png'))
 
 
@@ -77,7 +77,4 @@ if __name__=="__main__":
         inps['controller_params']['DISCON']['PS_BldPitchMin'] = controller.ps_min_bld_pitch
         inps['controller_params']['DISCON']['PS_BldPitchMin_N'] = len(controller.v)
         save_yaml(os.path.dirname(yaml_file), os.path.split(yaml_file)[-1]+'.new', inps)
-
-        print('here')
-
 
