@@ -49,15 +49,14 @@ if __name__=="__main__":
         vv = controller.v
         first_ps_ind = np.where(controller.ps_min_bld_pitch > 0)[0][0]
         last_dtu_ind = np.where(vv>dtu_min_pitch_table[-1][0])[0][0]
-        dtu_min_pitch = np.radians(np.interp(vv,dtu_min_pitch_table[:,0],dtu_min_pitch_table[:,1])[:last_dtu_ind+1])
+        dtu_min_pitch = np.radians(np.interp(vv,dtu_min_pitch_table[:,0],dtu_min_pitch_table[:,1])[:last_dtu_ind])
         # min_pitch = np.radians(dtu_min_pitch)
-        ps_min_pitch = controller.ps_min_bld_pitch[first_ps_ind:]
-        dtu_v = vv[:last_dtu_ind+1]
-        ps_v = vv[first_ps_ind:]
+        ps_min_pitch = controller.ps_min_bld_pitch[last_dtu_ind:]
 
         controller.ps_min_bld_pitch = np.r_[dtu_min_pitch,ps_min_pitch]
-        controller.v = np.r_[dtu_v,ps_v]    # don't actually want to overwrite this, just for vis
 
+        # check that controller.v is non-decreasing
+        assert(all(np.diff(controller.v) > 0))
        
         ax.plot(controller.v, controller.ps_min_bld_pitch, label='Updated Pitch Schedule',linestyle='--')
         ax.set_xlabel('Wind speed (m/s)')
