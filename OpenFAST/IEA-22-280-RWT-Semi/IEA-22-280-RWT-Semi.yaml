@@ -53,7 +53,7 @@ controller_params:
     Ext_Mode: 0
     interp_type: sigma
     max_pitch: 1.57
-    min_pitch: 0.0
+    min_pitch: -0.07
     vs_minspd: 0.0
     ss_vsgain: 1.0
     ss_pcgain: 0.001
