@@ -83,7 +83,7 @@ controller_params:
     AWC_Mode: 0
     CC_Mode: 0
     StC_Mode: 0
-turbine_params: {rotor_inertia: 749154917.0, rated_rotor_speed: 0.739436, v_min: 3.0, v_rated: 11.51447692, v_max: 25.0, max_pitch_rate: 0.03490659, max_torque_rate: 4500000.0, rated_power: 22000000.0, bld_edgewise_freq: 3.6531113561725572, bld_flapwise_freq: 2.7716172770411616, TSR_operational: 9.56}
+turbine_params: {rotor_inertia: 749154917.0, rated_rotor_speed: 0.739436, v_min: 3.0, v_rated: 11.51447692, v_max: 25.0, max_pitch_rate: 0.03490659, max_torque_rate: 4500000.0, rated_power: 22000000.0, bld_edgewise_freq: 3.6531113561725572, bld_flapwise_freq: 2.7716172770411616, TSR_operational: 9.15}
 linmodel_tuning:
     type: none
     linfile_path: none
