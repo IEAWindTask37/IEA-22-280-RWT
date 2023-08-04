@@ -609,7 +609,7 @@ begin dll;
       dll inpvec 1 25; Command to deploy mechanical disc brake [0,1]
     end output;
     begin actions; 
-      mbdy moment_int shaft 1 -3 shaft connector 2;   Brake LSS torque [Nm]
+      mbdy moment_int shaft 1 3 shaft connector 2;   Brake LSS torque [Nm]
     end actions;
   end type2_dll;
   begin type2_dll;   pitch servo
