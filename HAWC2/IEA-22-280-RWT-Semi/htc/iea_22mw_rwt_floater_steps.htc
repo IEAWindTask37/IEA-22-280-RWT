@@ -1,0 +1,1827 @@
+;  IEA-22MW-RWT with semi-sub floater
+;
+begin simulation; 
+  time_stop 1200.0;
+  solvertype 2;    (newmark)
+  on_no_convergence continue;
+  convergence_limits 1000.0 1.0 1e-07;
+  logfile ./logfiles/iea_22mw_rwt_floater_steps.log;
+  begin newmark; 
+    deltat 0.01;
+  end newmark;
+;  visualization   ./visualization/iea_22mw_rwt_floater_steps.hdf5;
+end simulation;
+;
+begin new_htc_structure;
+  begin main_body;
+    name        ifb ;
+    type        timoschenko ;
+    nbodies       1 ;
+    node_distribution c2_def ;
+	damping_posdef 0.0 0.0 0.0 0.0 0.0 0.0 ;
+    begin  timoschenko_input ;
+      filename data/IEA-22MW_dummy_st.dat;
+      set  1 1 ;
+    end  timoschenko_input ;
+    begin  c2_def ;
+      nsec 2 ;
+      sec  1  0.0e+00  0.0e+00 0.0e+00  0.0e+00 ;
+      sec  2  0.0e+00  0.0e+00 15.0e+00  0.0e+00 ;
+    end  c2_def ;
+	begin visualization_profile;
+      type cylinder;
+      nsec 2; nr of visualization sections
+      sec 0.0	12.0; z, diameter
+      sec 15.0	12.0;
+    end visualization_profile;
+  end main_body ;
+  begin main_body;
+    name        vc_00 ;
+    type        timoschenko ;
+    nbodies       1 ;
+    node_distribution c2_def ;
+	damping_posdef 0.0 0.0 0.0 0.0 0.0 0.0 ;
+    begin  timoschenko_input ;
+      filename data/IEA-22MW_dummy_st.dat;
+      set  1 1 ;
+    end  timoschenko_input ;
+    begin  c2_def ;
+      nsec 3 ;
+      sec  1  0.0e+00  0.0e+00 0.0e+00  0.0e+00 ;
+      sec  2  0.0e+00  0.0e+00 17.0e+00  0.0e+00 ;
+      sec  3  0.0e+00  0.0e+00 25.0e+00  0.0e+00 ;
+    end  c2_def ;
+	begin visualization_profile;
+      type cylinder;
+      nsec 2; nr of visualization sections
+      sec 0.0	12.0; z, diameter
+      sec 25.0	12.0;
+    end visualization_profile;
+  end main_body ;
+  begin main_body;
+    name        vc_01 ;
+    type        timoschenko ;
+    nbodies       1 ;
+    node_distribution c2_def ;
+	damping_posdef 0.0 0.0 0.0 0.0 0.0 0.0 ;
+    begin  timoschenko_input ;
+      filename data/IEA-22MW_dummy_st.dat;
+      set  1 1 ;
+    end  timoschenko_input ;
+    begin  c2_def ;
+      nsec 3 ;
+      sec  1  0.0e+00  0.0e+00 0.0e+00  0.0e+00 ;
+      sec  2  0.0e+00  0.0e+00 32.0e+00  0.0e+00 ;
+      sec  3  0.0e+00  0.0e+00 40.0e+00  0.0e+00 ;
+    end  c2_def ;
+	begin visualization_profile;
+      type cylinder;
+      nsec 2; nr of visualization sections
+      sec 0.0	12.0; z, diameter
+      sec 40.0	12.0;
+    end visualization_profile;
+  end main_body ;
+  begin main_body;
+    name        vc_02 ;
+    type        timoschenko ;
+    nbodies       1 ;
+    node_distribution c2_def ;
+	damping_posdef 0.0 0.0 0.0 0.0 0.0 0.0 ;
+    begin  timoschenko_input ;
+      filename data/IEA-22MW_dummy_st.dat;
+      set  1 1 ;
+    end  timoschenko_input ;
+    begin  c2_def ;
+      nsec 3 ;
+      sec  1  0.0e+00  0.0e+00 0.0e+00  0.0e+00 ;
+      sec  2  0.0e+00  0.0e+00 32.0e+00  0.0e+00 ;
+      sec  3  0.0e+00  0.0e+00 40.0e+00  0.0e+00 ;
+    end  c2_def ;
+	begin visualization_profile;
+      type cylinder;
+      nsec 2; nr of visualization sections
+      sec 0.0	12.0; z, diameter
+      sec 40.0	12.0;
+    end visualization_profile;
+  end main_body ;
+  begin main_body;
+    name        vc_03 ;
+    type        timoschenko ;
+    nbodies       1 ;
+    node_distribution c2_def ;
+	damping_posdef 0.0 0.0 0.0 0.0 0.0 0.0 ;
+    begin  timoschenko_input ;
+      filename data/IEA-22MW_dummy_st.dat;
+      set  1 1 ;
+    end  timoschenko_input ;
+    begin  c2_def ;
+      nsec 3 ;
+      nsec 3 ;
+      sec  1  0.0e+00  0.0e+00 0.0e+00  0.0e+00 ;
+      sec  2  0.0e+00  0.0e+00 32.0e+00  0.0e+00 ;
+      sec  3  0.0e+00  0.0e+00 40.0e+00  0.0e+00 ;
+    end  c2_def ;
+	begin visualization_profile;
+      type cylinder;
+      nsec 2; nr of visualization sections
+      sec 0.0	12.0; z, diameter
+      sec 40.0	12.0;
+    end visualization_profile;
+  end main_body ;
+  begin main_body;
+    name        hcl_01 ;
+    type        timoschenko ;
+    nbodies       1 ;
+    node_distribution c2_def ;
+	damping_posdef 0.0 0.0 0.0 0.0 0.0 0.0 ;
+    begin  timoschenko_input ;
+      filename data/IEA-22MW_dummy_st.dat;
+      set  1 1 ;
+    end  timoschenko_input ;
+    begin  c2_def ;
+      nsec 2 ;
+      sec  1  0.0e+00  0.0e+00 0.0e+00  0.0e+00 ;
+      sec  2  0.0e+00  0.0e+00 65.0e+00  0.0e+00 ;
+    end  c2_def ;
+	begin visualization_profile;
+      type cylinder;
+      nsec 2; nr of visualization sections
+      sec 0.0	10.0; z, diameter
+      sec 65.0	10.0;
+    end visualization_profile;
+  end main_body ;
+  begin main_body;
+    name        hcl_02 ;
+    type        timoschenko ;
+    nbodies       1 ;
+    node_distribution c2_def ;
+	damping_posdef 0.0 0.0 0.0 0.0 0.0 0.0 ;
+    begin  timoschenko_input ;
+      filename data/IEA-22MW_dummy_st.dat;
+      set  1 1 ;
+    end  timoschenko_input ;
+    begin  c2_def ;
+      nsec 2 ;
+      sec  1  0.0e+00  0.0e+00 0.0e+00  0.0e+00 ;
+      sec  2  0.0e+00  0.0e+00 65.0e+00  0.0e+00 ;
+    end  c2_def ;
+	begin visualization_profile;
+      type cylinder;
+      nsec 2; nr of visualization sections
+      sec 0.0	10.0; z, diameter
+      sec 65.0	10.0;
+    end visualization_profile;
+  end main_body ;
+  begin main_body;
+    name        hcl_03 ;
+    type        timoschenko ;
+    nbodies       1 ;
+    node_distribution c2_def ;
+	damping_posdef 0.0 0.0 0.0 0.0 0.0 0.0 ;
+    begin  timoschenko_input ;
+      filename data/IEA-22MW_dummy_st.dat;
+      set  1 1 ;
+    end  timoschenko_input ;
+    begin  c2_def ;
+      nsec 2 ;
+      sec  1  0.0e+00  0.0e+00 0.0e+00  0.0e+00 ;
+      sec  2  0.0e+00  0.0e+00 65.0e+00  0.0e+00 ;
+    end  c2_def ;
+	begin visualization_profile;
+      type cylinder;
+      nsec 2; nr of visualization sections
+      sec 0.0	10.0; z, diameter
+      sec 65.0	10.0;
+    end visualization_profile;
+  end main_body ;
+  begin main_body;
+    name        hcu_01 ;
+    type        timoschenko ;
+    nbodies       1 ;
+    node_distribution c2_def ;
+	damping_posdef 0.0 0.0 0.0 0.0 0.0 0.0 ;
+    begin  timoschenko_input ;
+      filename data/IEA-22MW_dummy_st.dat;
+      set  1 1 ;
+    end  timoschenko_input ;
+    begin  c2_def ;
+      nsec 2 ;
+      sec  1  0.0e+00  0.0e+00 0.0e+00  0.0e+00 ;
+      sec  2  0.0e+00  0.0e+00 65.0e+00  0.0e+00 ;
+    end  c2_def ;
+	begin visualization_profile;
+      type cylinder;
+      nsec 2; nr of visualization sections
+      sec 0.0	0.91; z, diameter
+      sec 65.0	0.91;
+    end visualization_profile;
+  end main_body ;
+  begin main_body;
+    name        hcu_02 ;
+    type        timoschenko ;
+    nbodies       1 ;
+    node_distribution c2_def ;
+	damping_posdef 0.0 0.0 0.0 0.0 0.0 0.0 ;
+    begin  timoschenko_input ;
+      filename data/IEA-22MW_dummy_st.dat;
+      set  1 1 ;
+    end  timoschenko_input ;
+    begin  c2_def ;
+      nsec 2 ;
+      sec  1  0.0e+00  0.0e+00 0.0e+00  0.0e+00 ;
+      sec  2  0.0e+00  0.0e+00 65.0e+00  0.0e+00 ;
+    end  c2_def ;
+	begin visualization_profile;
+      type cylinder;
+      nsec 2; nr of visualization sections
+      sec 0.0	0.91; z, diameter
+      sec 65.0	0.91;
+    end visualization_profile;
+  end main_body ;
+  begin main_body;
+    name        hcu_03 ;
+    type        timoschenko ;
+    nbodies       1 ;
+    node_distribution c2_def ;
+	damping_posdef 0.0 0.0 0.0 0.0 0.0 0.0 ;
+    begin  timoschenko_input ;
+      filename data/IEA-22MW_dummy_st.dat;
+      set  1 1 ;
+    end  timoschenko_input ;
+    begin  c2_def ;
+      nsec 2 ;
+      sec  1  0.0e+00  0.0e+00 0.0e+00  0.0e+00 ;
+      sec  2  0.0e+00  0.0e+00 65.0e+00  0.0e+00 ;
+    end  c2_def ;
+	begin visualization_profile;
+      type cylinder;
+      nsec 2; nr of visualization sections
+      sec 0.0	0.91; z, diameter
+      sec 65.0	0.91;
+    end visualization_profile;
+  end main_body ;  
+  begin main_body; 
+    name tower;
+    type timoschenko;
+    nbodies 1;
+    node_distribution c2_def;
+    damping_posdef   0.0 0.0 0.0 0.00272819 0.00273093 0.00773657  ; tuned to 0.5% critical damping on first 2 modes	
+    begin timoschenko_input; 
+      filename ./data/IEA-22MW_tower_st.dat;
+      set 1 1;
+    end timoschenko_input;
+    begin c2_def; 
+      nsec 31;
+      sec 1 0.0 0.0 0.0 0.0;
+      sec 2 0.0 0.0 -3.1878898299999996 0.0;
+      sec 3 0.0 0.0 -8.22920397 0.0;
+      sec 4 0.0 0.0 -13.270518110000001 0.0;
+      sec 5 0.0 0.0 -18.311832260000003 0.0;
+      sec 6 0.0 0.0 -23.3531464 0.0;
+      sec 7 0.0 0.0 -28.394460549999998 0.0;
+      sec 8 0.0 0.0 -33.43577469 0.0;
+      sec 9 0.0 0.0 -38.47708883 0.0;
+      sec 10 0.0 0.0 -43.51840298 0.0;
+      sec 11 0.0 0.0 -48.55971712 0.0;
+      sec 12 0.0 0.0 -53.60103126999999 0.0;
+      sec 13 0.0 0.0 -58.642345410000004 0.0;
+      sec 14 0.0 0.0 -63.68365955 0.0;
+      sec 15 0.0 0.0 -68.7249737 0.0;
+      sec 16 0.0 0.0 -73.76628784 0.0;
+      sec 17 0.0 0.0 -78.80760199 0.0;
+      sec 18 0.0 0.0 -83.84891613 0.0;
+      sec 19 0.0 0.0 -88.89023027 0.0;
+      sec 20 0.0 0.0 -93.93154442 0.0;
+      sec 21 0.0 0.0 -98.97285856 0.0;
+      sec 22 0.0 0.0 -104.0141727 0.0;
+      sec 23 0.0 0.0 -109.05548685 0.0;
+      sec 24 0.0 0.0 -114.09680098999999 0.0;
+      sec 25 0.0 0.0 -119.13811514 0.0;
+      sec 26 0.0 0.0 -124.17942928 0.0;
+      sec 27 0.0 0.0 -129.22074342 0.0;
+      sec 28 0.0 0.0 -134.26205757 0.0;
+      sec 29 0.0 0.0 -139.30337171 0.0;
+      sec 30 0.0 0.0 -144.34468586 0.0;
+      sec 31 0.0 0.0 -149.386 0.0;
+    end c2_def;
+  end main_body;
+  begin main_body; 
+    name towertop;
+    type timoschenko;
+    nbodies 1;
+    node_distribution c2_def;
+    begin timoschenko_input; 
+      filename ./data/IEA-22MW_towertop_st.dat;
+      set 1 1;
+    end timoschenko_input;
+    begin c2_def; 
+      nsec 2;
+      sec 1 0.0 0.0 0.0 0.0;
+      sec 2 0.0 0.0 -4.1425407062805295 0.0;
+    end c2_def;
+    concentrated_mass 1 0.0 0.0 0.0 37542.77277724435 0.0 0.0 0.0;
+    concentrated_mass 1 -5.676054421863411 -0.1767919958649313 -4.160404736917379 845409.6482639315 12495314.032290645 16215164.009113628 16777550.993952524 848352.5106933172 3471103.8945002914 -305287.4309320898;
+	begin visualization_profile;
+      type cylinder;
+      nsec 2; nr of visualization sections
+      sec 0.00000	5.700; z, diameter
+      sec 4.1425407062805295	5.700;
+    end visualization_profile;
+  end main_body;
+  begin main_body; 
+    name connector;
+    type timoschenko;
+    nbodies 1;
+    node_distribution c2_def;
+    begin timoschenko_input; 
+      filename ./data/IEA-22MW_connector_st.dat;
+      set 1 1;
+    end timoschenko_input;
+    begin c2_def; 
+      nsec 2;
+      sec 1 0.0 0.0 0.0 0.0;
+      sec 2 0.0 0.0 7.9472357891861645 0.0;
+    end c2_def;
+	begin visualization_profile;
+      type cylinder;
+      nsec 2; nr of visualization sections
+      sec 0.00000	6.000; z, diameter
+      sec 7.9472357891861645	6.000;
+    end visualization_profile;
+  end main_body;
+  begin main_body; 
+    name shaft;
+    type timoschenko;
+    nbodies 1;
+    node_distribution c2_def;
+    begin timoschenko_input; 
+      filename ./data/IEA-22MW_shaft_st.dat;
+      set 1 1;
+    end timoschenko_input;
+    begin c2_def; 
+      nsec 2;
+      sec 1 0.0 0.0 0.0 0.0;
+      sec 2 0.0 0.0 6.129880124703066 0.0;
+    end c2_def;
+    concentrated_mass 2 0.0 0.0 0.0 131293.36809765798 1305740.4947308905 1305740.4947308905 2049657.307159771;
+	begin visualization_profile;
+      type cylinder;
+      nsec 2; nr of visualization sections
+      sec 0.00000	6.000; z, diameter
+      sec 6.129880124703066	6.000;
+    end visualization_profile;
+  end main_body;
+  begin main_body; 
+    name hub1;
+    type timoschenko;
+    nbodies 1;
+    node_distribution c2_def;
+    begin timoschenko_input; 
+      filename ./data/IEA-22MW_hub1_st.dat;
+      set 1 1;
+    end timoschenko_input;
+    begin c2_def; 
+      nsec 2;
+      sec 1 0.0 0.0 0.0 0.0;
+      sec 2 0.0 0.0 4.2 0.0;
+    end c2_def;
+	begin visualization_profile;
+      type cylinder;
+      nsec 2; nr of visualization sections
+      sec 0.00000	5.8; z, diameter
+      sec 4.20000	5.8;
+    end visualization_profile;	
+  end main_body;
+  begin main_body; 
+    name hub2;
+    copy_main_body hub1;
+  end main_body;
+  begin main_body; 
+    name hub3;
+    copy_main_body hub1;
+  end main_body;
+  begin main_body; 
+    name blade1;
+    type timoschenko;
+    nbodies 29;
+    node_distribution c2_def;
+    damping_aniso_v2   0.0 0.0 0.0 0.00303 0.00417 0.00072  ; tuned to 0.5% critical damping on first flap/edge modes and 2% on first torsion
+    begin timoschenko_input; 
+      filename ./data/IEA-22MW_blade1_st.dat;
+      set 1 1;
+      FPM 1;
+    end timoschenko_input;
+    begin c2_def; 
+      nsec 30;
+      sec 1 -0.0 0.0 5.1158032131531515e-12 -12.000000000000002;
+      sec 2 -0.0 -0.0026193412852921105 2.7660328691869096 -11.829495321756061;
+      sec 3 -0.19706250407943376 0.025887572389404576 6.915221488935337 -11.577000075285806;
+      sec 4 -0.40783455704745825 0.04367750009794867 12.101781109460003 -11.274200976965048;
+      sec 5 -0.6175221602250939 0.055698119701641235 17.28830275762805 -10.99423473744416;
+      sec 6 -0.7908737784119435 0.05965522145857735 22.474657837141567 -10.678946185184516;
+      sec 7 -0.9267155271327197 0.042834097488984535 27.660781509361573 -9.34065812625953;
+      sec 8 -1.0065432908761376 0.008372998779894475 32.846788351036615 -7.393336093635948;
+      sec 9 -1.013929437205506 -0.016506887902269757 38.032941953075266 -6.179880679142836;
+      sec 10 -0.9547584374143063 -0.034165346295309096 43.21914400370442 -5.254214922646671;
+      sec 11 -0.8573604229676262 -0.0447357774766861 48.405383052602346 -4.4011454510418;
+      sec 12 -0.7436066664278106 -0.048601333359629156 53.59166211836861 -3.595174418695691;
+      sec 13 -0.6279396880530532 -0.04885342461225063 58.77789871608423 -2.8215750376374444;
+      sec 14 -0.5199112579849768 -0.051076909726003726 63.964020636162296 -2.027639810103842;
+      sec 15 -0.4250957996480235 -0.062214988195210055 69.14989385312819 -1.1801368750354475;
+      sec 16 -0.346003626698 -0.09029548043999376 74.3355116165983 -0.305902625876596;
+      sec 17 -0.28292050556308534 -0.14497026191996729 79.52071694611804 0.5702315260346766;
+      sec 18 -0.2352698942192084 -0.23739334474530505 84.70537808387576 1.4451310337799967;
+      sec 19 -0.20143288487781005 -0.3798736378363671 89.8893048745549 2.298916789950943;
+      sec 20 -0.17948531159945083 -0.5859354220113863 95.07221473916263 3.118431899008379;
+      sec 21 -0.1673346385982104 -0.8702564077057862 100.25367686570951 3.8946006457807045;
+      sec 22 -0.1629275686870291 -1.2486494186765542 105.43303448131368 4.618564320963661;
+      sec 23 -0.16427458574422504 -1.7380698906334162 110.60927108007752 5.281797661597763;
+      sec 24 -0.16946225101324242 -2.3566142597038726 115.78039217720674 5.874498245664472;
+      sec 25 -0.17673758130763598 -3.1235166774517147 120.94314649349835 6.37231904027472;
+      sec 26 -0.1840196826706249 -4.058954858338096 126.08987289888181 6.6845012961698815;
+      sec 27 -0.18671892733599793 -5.183711845951494 131.20215539485008 6.625749483388198;
+      sec 28 -0.16700996158715103 -6.23249660087651 135.22376768533667 5.984526384481071;
+      sec 29 -0.12275661052257127 -6.610665776356686 136.5230058770576 5.543265897700049;
+      sec 30 -0.06989870998719491 -7.005761806012638 137.79813187143728 4.952606299546629;
+    end c2_def;
+  end main_body;
+  begin main_body; 
+    name blade2;
+    copy_main_body blade1;
+  end main_body;
+  begin main_body; 
+    name blade3;
+    copy_main_body blade1;
+  end main_body;
+  begin ext_sys ;
+    module  ESYSWamit ;
+    name    floater ;
+    dll     'ESYSWamit_64.dll';
+    ndata 18 ;
+    data    WAMIT_FILE 'hydro/semi';
+    data    time_step 0.01 ;
+    data    GRAVITY 9.81 ;
+    data    DENSITY 1025.0 ;
+    data    MASS    21184952.4420762 ;
+    data    COG     0.0 0.0 -15.249336035816686 ;
+    data    BUOY    2.4864e+08 ;
+    data    COB_XY  0.0 0.0 ;
+    data    RIJ_COG 1 1 32.9756 ;
+    data    RIJ_COG 2 2 32.9830 ;
+    data    RIJ_COG 3 3 45.2006 ;
+    data    INI_POS 0.0 0.0 0.0 ;
+    data    INIT_ROT 0.0 0.0 180.0 ;
+    data    IRF_TIME_SPAN 60.0 ;
+    data    WAVE_DIR -180.0 ;
+    data    DIFFRACTION_METHOD irf_1 ;
+    data    END ;
+  end   ext_sys ;
+begin ext_sys ;
+  module elasticBar ;
+  name   line1 ;
+  dll 'ESYSMooring_64.dll' ; 
+  ndata 10  ;
+  data nelem 100 ; 
+  data mass 1007.4375 875.3624 ; 
+  data start_pos 0.0 -837.800000000000 200.0 ;
+  data end_pos 0.0 -0.799999999999955 200.0 ;
+  data cdp_cdl_cm 184.5000 115.3125 10.5028 ; ; 0.5*rho*D*Cd_n 0.5*rho*D*Cd_a Cm*pi*(D/2)^2*(M_air-M_water)
+  data axial_stiff 4.3234e+09 ;
+  data read_write_initcond 1 0 ;
+;  data read_write_initcond 0 1 ;  
+  data bottom_prop 200.0 0.01 0.1 ;
+  data apply_wave_forces 1 ;
+;  data apply_wind_forces <wi> ;
+;  data output position <node> ;
+;  data output force <node> ;
+;  data mass_summary <file> ;
+  data end ;
+end ext_sys ;
+begin ext_sys ;
+  module elasticBar ;
+  name   line2 ;
+  dll 'ESYSMooring_64.dll' ; 
+  ndata 10  ;
+  data nelem 100 ; 
+  data mass 1007.4375 875.3624 ; 
+  data start_pos 725.556100000000	418.900000000000 200.0 ;
+  data end_pos 133.707724146860 -172.948375853140	200.0 ;
+  data cdp_cdl_cm 184.5000 115.3125 10.5028 ; ; 0.5*rho*D*Cd_n 0.5*rho*D*Cd_a Cm*pi*(D/2)^2*(M_air-M_water)
+  data axial_stiff 4.3234e+09 ;
+  data read_write_initcond 1 0 ;
+;  data read_write_initcond 0 1 ;  
+  data bottom_prop 200.0 0.01 0.1 ;
+  data apply_wave_forces 1 ;
+;  data apply_wind_forces <wi> ;
+;  data output position <node> ;
+;  data output force <node> ;
+;  data mass_summary <file> ;
+  data end ;
+end ext_sys ;
+begin ext_sys ;
+  module elasticBar ;
+  name   line3 ;
+  dll 'ESYSMooring_64.dll' ; 
+  ndata 10  ;
+  data nelem 100 ; 
+  data mass 1007.4375 875.3624 ;
+  data start_pos -725.556100000000 418.900000000000 200.0 ;
+  data end_pos -133.707724146860 -172.948375853140 200.0 ;
+  data cdp_cdl_cm 184.5000 115.3125 10.5028 ; ; 0.5*rho*D*Cd_n 0.5*rho*D*Cd_a Cm*pi*(D/2)^2*(M_air-M_water)
+  data axial_stiff 4.3234e+09 ;
+  data read_write_initcond 1 0 ;
+;  data read_write_initcond 0 1 ;  
+  data bottom_prop 200.0 0.01 0.1 ;
+  data apply_wave_forces 1 ;
+;  data apply_wind_forces <wi> ;
+;  data output position <node> ;
+;  data output force <node> ;
+;  data mass_summary <file> ;
+  data end ;
+end ext_sys ;
+  begin orientation;
+    begin base;
+	  mbdy ifb ;
+	  inipos 0.0 0.0 -15.0 ;
+      mbdy_eulerang  0.0  0.0  0.0  ;
+    end base ;
+    begin base;
+	  mbdy vc_00 ;
+	  inipos 0.0 0.0 0.0 ;
+      mbdy_eulerang  0.0  0.0  0.0  ;
+    end base ;
+    begin base;
+	  mbdy vc_01 ;
+	  inipos 0.0 -65.0 -15.0 ;
+      mbdy_eulerang  0.0  0.0  0.0  ;
+    end base ;
+    begin base;
+	  mbdy vc_02 ;
+	  inipos 56.29165283209902 32.5 -15.0 ;
+      mbdy_eulerang  0.0  0.0  0.0  ;
+    end base ;
+    begin base;
+	  mbdy vc_03 ;
+	  inipos -56.29165283209902 32.5 -15.0 ;
+      mbdy_eulerang  0.0  0.0  0.0  ;
+    end base ;
+    begin base;
+	  mbdy hcl_01 ;
+	  inipos 0.0 0.0 17.0 ;
+      mbdy_eulerang  90.0  0.0  0.0  ;
+    end base ;
+    begin base;
+	  mbdy hcl_02 ;
+	  inipos 0.0 0.0 17.0 ;
+      mbdy_eulerang  90.0  0.0  0.0  ;
+      mbdy_eulerang  0.0  120.0  0.0  ;	  
+    end base ;
+    begin base;
+	  mbdy hcl_03 ;
+	  inipos 0.0 0.0 17.0 ;
+      mbdy_eulerang  90.0  0.0  0.0  ;
+      mbdy_eulerang  0.0  -120.0  0.0  ;	  
+    end base ;
+    begin base;
+	  mbdy hcu_01 ;
+	  inipos 0.0 0.0 -15 ;
+      mbdy_eulerang  90.0  0.0  0.0  ;
+    end base ;
+    begin base;
+	  mbdy hcu_02 ;
+	  inipos 0.0 0.0 -15 ;
+      mbdy_eulerang  90.0  0.0  0.0  ;
+      mbdy_eulerang  0.0  120.0  0.0  ;	  
+    end base ;
+    begin base;
+	  mbdy hcu_03 ;
+	  inipos 0.0 0.0 -15 ;
+      mbdy_eulerang  90.0  0.0  0.0  ;
+      mbdy_eulerang  0.0  -120.0  0.0  ;	  
+    end base ;	
+    begin  relative  ; 
+      mbdy1  ifb  1  ; 
+      mbdy2  tower  1  ; 
+      mbdy2_eulerang  0.0  0.0  0.0  ; 
+    end  relative  ;
+    begin relative; 
+      mbdy1 tower last;
+      mbdy2 towertop 1;
+      mbdy2_eulerang 0.0 0.0 0.0;
+    end relative;
+    begin relative; 
+      mbdy1 towertop last;
+      mbdy2 connector 1;
+      mbdy2_eulerang 90.0 0.0 0.0;
+      mbdy2_eulerang 6.0 0.0 0.0;
+    end relative;
+    begin relative; 
+      mbdy1 connector last;
+      mbdy2 shaft 1;
+      mbdy2_eulerang 0.0 0.0 0.0;
+      mbdy2_ini_rotvec_d1 0.0 0.0 -1.0 0.19337770030518872;
+    end relative;
+    begin relative; 
+      mbdy1 shaft last;
+      mbdy2 hub1 1;
+      mbdy2_eulerang -90.0 0.0 0.0;
+      mbdy2_eulerang 0.0 180.0 0.0;
+      mbdy2_eulerang 4.0 0.0 0.0;
+    end relative;
+    begin relative; 
+      mbdy1 shaft last;
+      mbdy2 hub2 1;
+      mbdy2_eulerang -90.0 0.0 0.0;
+      mbdy2_eulerang 0.0 60.0 0.0;
+      mbdy2_eulerang 4.0 0.0 0.0;
+    end relative;
+    begin relative; 
+      mbdy1 shaft last;
+      mbdy2 hub3 1;
+      mbdy2_eulerang -90.0 0.0 0.0;
+      mbdy2_eulerang 0.0 -60.0 0.0;
+      mbdy2_eulerang 4.0 0.0 0.0;
+    end relative;
+    begin relative; 
+      mbdy1 hub1 last;
+      mbdy2 blade1 1;
+      mbdy2_eulerang 0.0 0.0 0.0;
+    end relative;
+    begin relative; 
+      mbdy1 hub2 last;
+      mbdy2 blade2 1;
+      mbdy2_eulerang 0.0 0.0 0.0;
+    end relative;
+    begin relative; 
+      mbdy1 hub3 last;
+      mbdy2 blade3 1;
+      mbdy2_eulerang 0.0 0.0 0.0;
+    end relative;
+  end orientation;
+  begin constraint;  
+    begin dll;
+      ID        0.0 0.0 15.0             ;
+      dll       'ESYSWamit_64.dll'  ;
+      init      cstr_h2_esyswamit_init   ;
+      update    cstr_h2_esyswamit_update ;
+      neq       6                        ;
+      nbodies   1                        ;
+      nesys     1                        ;
+      mbdy_node ifb  0                   ;
+      esys_node floater 0                ;
+    end dll;
+    begin  fix1  ; 
+      body1  ifb  last  ; 
+      body2  vc_00  1  ; 
+    end  fix1  ;
+    begin  fix1  ; 
+      body1  ifb  last  ; 
+      body2  hcu_01  1  ; 
+    end  fix1  ;
+    begin  fix1  ; 
+      body1  ifb  last  ; 
+      body2  hcu_02  1  ; 
+    end  fix1  ;
+    begin  fix1  ; 
+      body1  ifb  last  ; 
+      body2  hcu_03  1  ; 
+    end  fix1  ;
+    begin  fix1  ; 
+      body1  vc_00  2  ; 
+      body2  hcl_01  1  ; 
+    end  fix1  ;
+    begin  fix1  ; 
+      body1  vc_00  2  ; 
+      body2  hcl_02  1  ; 
+    end  fix1  ;
+    begin  fix1  ; 
+      body1  vc_00  2  ; 
+      body2  hcl_03  1  ; 
+    end  fix1  ;
+    begin  fix1  ; 
+      body1  hcu_01  last  ; 
+      body2  vc_01  1  ; 
+    end  fix1  ;
+    begin  fix1  ; 
+      body1  hcu_02  last  ; 
+      body2  vc_02  1  ; 
+    end  fix1  ;
+    begin  fix1  ; 
+      body1  hcu_03  last  ; 
+      body2  vc_03  1  ; 
+    end  fix1  ;
+    begin  fix1  ; 
+      body1  hcl_01  last  ; 
+      body2  vc_01  2  ; 
+    end  fix1  ;
+    begin  fix1  ; 
+      body1  hcl_02  last  ; 
+      body2  vc_02  2  ; 
+    end  fix1  ;
+    begin  fix1  ; 
+      body1  hcl_03  last  ; 
+      body2  vc_03  2  ; 
+    end  fix1  ;
+;    begin fix0 ;
+;	  mbdy ifb ;
+;	  disable_at 100.0; ; set to 100.0 s for initialization
+;	end fix0 ;
+    begin  fix1  ; 
+      body1  ifb  1  ; 
+      body2  tower  1  ; 
+    end  fix1  ;
+    begin fix1; 
+      mbdy1 tower last;
+      mbdy2 towertop 1;
+    end fix1;
+    begin fix1; 
+      mbdy1 towertop last;
+      mbdy2 connector 1;
+    end fix1;
+    begin fix1; 
+      mbdy1 shaft last;
+      mbdy2 hub1 1;
+    end fix1;
+    begin fix1; 
+      mbdy1 shaft last;
+      mbdy2 hub2 1;
+    end fix1;
+    begin fix1; 
+      mbdy1 shaft last;
+      mbdy2 hub3 1;
+    end fix1;
+    begin bearing1;  shaft rotates as free bearing
+     name  shaft_rot;
+      body1 connector last;
+      body2 shaft 1;
+      bearing_vector 2 0.0 0.0 -1.0;  x=coo (0=global.1=body1.2=body2) vector in body2 coordinates where the free rotation is present
+   end bearing1; 
+    begin bearing2; 
+      name pitch1;
+      mbdy1 hub1 last;
+      mbdy2 blade1 1;
+      bearing_vector 2 0.0 0.0 -1.0;
+    end bearing2;
+    begin bearing2; 
+      name pitch2;
+      mbdy1 hub2 last;
+      mbdy2 blade2 1;
+      bearing_vector 2 0.0 0.0 -1.0;
+    end bearing2;
+    begin bearing2; 
+      name pitch3;
+      mbdy1 hub3 last;
+      mbdy2 blade3 1;
+      bearing_vector 2 0.0 0.0 -1.0;
+    end bearing2;
+begin dll ;    
+  dll 'ESYSMooring_64.dll' ; 
+  init    cstrbarfixedtoglobal_init   ;
+  update  cstrbarfixedtoglobal_update ;
+  neq     3 ;
+  nbodies 0 ;
+  nesys   1 ;
+  esys_node  line1 1 ;
+end dll ;
+begin dll ;    
+  dll 'ESYSMooring_64.dll' ; 
+  ID   0.0 -65.0000 18.1440 0.01 ; ; set to 100.0 s for initialization
+  init    cstrbarsfixedtobodyrelative_init ;
+  update  cstrbarsfixedtobodyrelative_update ;
+  neq     3 ;
+  nbodies 1 ;
+  nesys   1 ;
+  mbdy_node  ifb 2 ; 
+  esys_node  line1 101 ; 
+end dll ;
+begin dll ;    
+  dll 'ESYSMooring_64.dll' ; 
+  init    cstrbarfixedtoglobal_init   ;
+  update  cstrbarfixedtoglobal_update ;
+  neq     3 ;
+  nbodies 0 ;
+  nesys   1 ;
+  esys_node  line2 1 ;
+end dll ;
+begin dll ;    
+  dll 'ESYSMooring_64.dll' ; 
+  ID   56.2917 32.5000 18.1440 0.01 ; ; set to 100.0 s for initialization
+  init    cstrbarsfixedtobodyrelative_init ;
+  update  cstrbarsfixedtobodyrelative_update ;
+  neq     3 ;
+  nbodies 1 ;
+  nesys   1 ;
+  mbdy_node  ifb 2 ; 
+  esys_node  line2 101 ; 
+end dll ;
+;
+begin dll ;    
+  dll 'ESYSMooring_64.dll' ; 
+  init    cstrbarfixedtoglobal_init   ;
+  update  cstrbarfixedtoglobal_update ;
+  neq     3 ;
+  nbodies 0 ;
+  nesys   1 ;
+  esys_node  line3 1 ;
+end dll ;
+begin dll ;    
+  dll 'ESYSMooring_64.dll' ; 
+  ID   -56.2917 32.5000 18.1440 0.01 ; ; set to 100.0 s for initialization
+  init    cstrbarsfixedtobodyrelative_init ;
+  update  cstrbarsfixedtobodyrelative_update ;
+  neq     3 ;
+  nbodies 1 ;
+  nesys   1 ;
+  mbdy_node  ifb 2 ; 
+  esys_node  line3 101 ; 
+end dll ;	
+  end constraint;
+end new_htc_structure;
+;
+begin wind; 
+  density 1.225;
+  wsp 4.0;
+  tint 0.0;
+  horizontal_input 1;  0=false, 1=true
+  windfield_rotations 0.0 0.0 0.0;    yaw, tilt, rotation
+  center_pos0 0.0 0.0 -170.0;  center of turb box
+  shear_format 3 0.0;  0=none,1=constant,2=log,3=power,4=linear
+  turb_format 1;  0=none, 1=mann,2=flex
+  tower_shadow_method 3;  0=none, 1=potential flow, 2=jet, 3=potential 2
+  scale_time_start 100.0;
+  wind_ramp_factor 0.0 100.0 1.0 1.0;  tstart, tstop, % start, % stop
+;[gust]  iec_gust [gust_type] [G_A] [G_phi0] [G_t0] [G_T];
+wind_ramp_abs         150.0        150.1     0.0     1.0;
+wind_ramp_abs         200.0        200.1     0.0     1.0;
+wind_ramp_abs         250.0        250.1     0.0     1.0;
+wind_ramp_abs         300.0        300.1     0.0     1.0;
+wind_ramp_abs         350.0        350.1     0.0     1.0;
+wind_ramp_abs         400.0        400.1     0.0     1.0;
+wind_ramp_abs         450.0        450.1     0.0     1.0;
+wind_ramp_abs         500.0        500.1     0.0     1.0;
+wind_ramp_abs         550.0        550.1     0.0     1.0;
+wind_ramp_abs         600.0        600.1     0.0     1.0;
+wind_ramp_abs         650.0        650.1     0.0     1.0;
+wind_ramp_abs         700.0        700.1     0.0     1.0;
+wind_ramp_abs         750.0        750.1     0.0     1.0;
+wind_ramp_abs         800.0        800.1     0.0     1.0;
+wind_ramp_abs         850.0        850.1     0.0     1.0;
+wind_ramp_abs         900.0        900.1     0.0     1.0;
+wind_ramp_abs         950.0        950.1     0.0     1.0;
+wind_ramp_abs        1000.0       1000.1     0.0     1.0;
+wind_ramp_abs        1050.0       1050.1     0.0     1.0;
+wind_ramp_abs        1100.0       1100.1     0.0     1.0;
+wind_ramp_abs        1150.0       1150.1     0.0     1.0;
+  begin mann; 
+    create_turb_parameters 29.4 1 3.9 1006 1; L, alfaeps, gamma, seed, highfrq compensation
+    filename_u ./turb/turb_wsp08_s1006u.bin;
+    filename_v ./turb/turb_wsp08_s1006v.bin;
+    filename_w ./turb/turb_wsp08_s1006w.bin;
+    box_dim_u 8192 0.683594;
+    box_dim_v 32 9.6051;
+    box_dim_w 32 9.6051;
+    std_scaling   1.0 0.7 0.5 ;
+  end mann;
+  begin tower_shadow_potential_2; 
+    tower_mbdy_link tower;
+    nsec 2;
+    radius 0.0 5.0;  radius at base
+    radius 149.386  3.5;
+  end tower_shadow_potential_2;
+end wind;
+;
+begin aerodrag;   tower drag
+  begin aerodrag_element; 
+    mbdy_name tower;
+    aerodrag_sections uniform 10;
+    nsec 2;
+    sec 0.0 10.0 0.5;
+    sec 149.386 7.0 0.5;
+  end aerodrag_element;
+  begin aerodrag_element; 
+    mbdy_name connector;
+    aerodrag_sections uniform 2;
+    nsec 2;
+    sec 0.0 0.5 11.228;
+    sec 7.9472357891861645 0.5 11.228;
+  end aerodrag_element;
+  begin aerodrag_element; 
+    mbdy_name shaft;
+    aerodrag_sections uniform 2;
+    nsec 2;
+    sec 0.0 0.5 11.228;
+    sec 6.129880124703066 0.5 11.228;
+  end aerodrag_element;
+end aerodrag;
+;
+begin aero; 
+  nblades 3;
+  hub_vec shaft -3;  rotor rotation vector wrt. shaft coor sys (z upwind)
+  link 1 mbdy_c2_def blade1;
+  link 2 mbdy_c2_def blade2;
+  link 3 mbdy_c2_def blade3;
+  ae_filename ./data/IEA-22MW_ae.dat;
+  pc_filename ./data/IEA-22MW_pc.dat;
+  induction_method 1;  0=none, 1=normal
+  aerocalc_method 1;  0=aerodynamics disabled, 1=with aerodynamics
+  aerosections       50 ;
+;  aero_distribution ae_file 1;
+  ae_sets 1 1 1;
+  tiploss_method 1;  0=none, 1=prandtl
+  dynstall_method 2;  0=none, 1=stig øye method,2=mhh method
+  3d_correct_method 1;
+end aero;
+;
+begin hydro; 
+  begin water_properties; 
+    rho 1025; kg/m^3
+    gravity 9.81; m/s^2
+    mwl 0.0;
+    mudlevel 200.0;
+    wave_direction 0.0;
+;    [jonswap] water_kinematics_dll ./wkin_dll.dll ./htc_hydro/ireg_airy_jonswap_s[w_seed].inp;
+;    water_kinematics_dll ./wkin_dll.dll ./htc_hydro/ireg_airy_pm_s1106.inp;
+  end water_properties;
+  begin hydro_element;
+    mbdy_name ifb;
+    buoyancy 0;
+    hydrosections uniform 10;
+    nsec 2 ;
+    sec 0.0 -1.0 1.0 113.0973 113.0973 12.0 0.0 4.0 0.0 0.00000e+00 113.0973 ;
+    sec 15.0 -1.0 1.0 113.0973 113.0973 12.0 0.0 4.0 0.0 0.00000e+00 113.0973 ;
+  end hydro_element;
+  begin hydro_element;
+    mbdy_name vc_00;
+    buoyancy 0;
+    hydrosections uniform 10;
+    nsec 2 ;
+    sec 0.0 -1.0 1.0 113.0973 113.0973 12.0 0.0 4.0 0.0 0.00000e+00 113.0973 ;
+    sec 25.0 -1.0 1.0 113.0973 113.0973 12.0 0.0 4.0 0.0 0.00000e+00 113.0973 ;
+  end hydro_element;
+  begin hydro_element;
+    mbdy_name vc_01;
+    buoyancy 0;
+    hydrosections uniform 10;
+    nsec 2 ;
+    sec 0.0 -1.0 1.0 113.0973 113.0973 12.0 0.0 4.0 0.0 0.00000e+00 113.0973 ;
+    sec 40.0 -1.0 1.0 113.0973 113.0973 12.0 0.0 4.0 0.0 0.00000e+00 113.0973 ;
+  end hydro_element;
+  begin hydro_element;
+    mbdy_name vc_02;
+    buoyancy 0;
+    hydrosections uniform 10;
+    nsec 2 ;
+    sec 0.0 -1.0 1.0 113.0973 113.0973 12.0 0.0 4.0 0.0 0.00000e+00 113.0973 ;
+    sec 40.0 -1.0 1.0 113.0973 113.0973 12.0 0.0 4.0 0.0 0.00000e+00 113.0973 ;
+  end hydro_element;
+  begin hydro_element;
+    mbdy_name vc_03;
+    buoyancy 0;
+    hydrosections uniform 10;
+    nsec 2 ;
+    sec 0.0 -1.0 1.0 113.0973 113.0973 12.0 0.0 4.0 0.0 0.00000e+00 113.0973 ;
+    sec 40.0 -1.0 1.0 113.0973 113.0973 12.0 0.0 4.0 0.0 0.00000e+00 113.0973 ;
+  end hydro_element;
+  begin hydro_element;
+    mbdy_name hcl_01;
+    buoyancy 0;
+    hydrosections uniform 10;
+    nsec 2 ;
+    sec 0.0 -1.0 1.0 78.5398 78.5398 10.0 0.0 4.0 0.0 0.00000e+00 78.5398 ;
+    sec 65.0 -1.0 1.0 78.5398 78.5398 10.0 0.0 4.0 0.0 0.00000e+00 78.5398 ;
+  end hydro_element;
+  begin hydro_element;
+    mbdy_name hcl_02;
+    buoyancy 0;
+    hydrosections uniform 10;
+    nsec 2 ;
+    sec 0.0 -1.0 1.0 78.5398 78.5398 10.0 0.0 4.0 0.0 0.00000e+00 78.5398 ;
+    sec 65.0 -1.0 1.0 78.5398 78.5398 10.0 0.0 4.0 0.0 0.00000e+00 78.5398 ;
+  end hydro_element;
+  begin hydro_element;
+    mbdy_name hcl_03;
+    buoyancy 0;
+    hydrosections uniform 10;
+    nsec 2 ;
+    sec 0.0 -1.0 1.0 78.5398 78.5398 10.0 0.0 4.0 0.0 0.00000e+00 78.5398 ;
+    sec 65.0 -1.0 1.0 78.5398 78.5398 10.0 0.0 4.0 0.0 0.00000e+00 78.5398 ;
+  end hydro_element;
+  begin hydro_element;
+    mbdy_name hcu_01;
+    buoyancy 0;
+    hydrosections uniform 10;
+    nsec 2 ;
+    sec 0.0 -1.0 1.0 0.6504 0.6504 0.91 0.0 4.0 0.0 0.00000e+00 0.6504 ;
+    sec 65.0 -1.0 1.0 0.6504 0.6504 0.91 0.0 4.0 0.0 0.00000e+00 0.6504 ;
+  end hydro_element;
+  begin hydro_element;
+    mbdy_name hcu_02;
+    buoyancy 0;
+    hydrosections uniform 10;
+    nsec 2 ;
+    sec 0.0 -1.0 1.0 0.6504 0.6504 0.91 0.0 4.0 0.0 0.00000e+00 0.6504 ;
+    sec 65.0 -1.0 1.0 0.6504 0.6504 0.91 0.0 4.0 0.0 0.00000e+00 0.6504 ;
+  end hydro_element;
+  begin hydro_element;
+    mbdy_name hcu_03;
+    buoyancy 0;
+    hydrosections uniform 10;
+    nsec 2 ;
+    sec 0.0 -1.0 1.0 0.6504 0.6504 0.91 0.0 4.0 0.0 0.00000e+00 0.6504 ;
+    sec 65.0 -1.0 1.0 0.6504 0.6504 0.91 0.0 4.0 0.0 0.00000e+00 0.6504 ;
+  end hydro_element;
+end hydro;
+;
+begin dll;
+  begin type2_dll;   dtu basic controller
+    name dtu_we_controller;
+    filename ./control/dtu_we_controller.dll;
+    dll_subroutine_init init_regulation_advanced;
+    dll_subroutine_update update_regulation;
+    arraysizes_init 100 1;
+    arraysizes_update 100 100;
+    begin init; 
+      ;  Overall parameters
+      constant 1 22000.0; Rated power [kW]
+      constant 2 0.19337770030518872; Minimum rotor (LSS) speed [rad/s]
+      constant 3 0.7394366188733804; Rated rotor (LSS) speed [rad/s]
+      constant 4 44628000.0; Maximum allowable generator torque [Nm]   ; 150% of max torque
+      constant 5 100.0; Minimum pitch angle, theta_min [deg],
+      ; if |theta_min|>90, then a table of <wsp,theta_min> is read ;
+      ; from a file named 'wptable.n', where n=int(theta_min)
+      constant 6 90.0; Maximum pitch angle [deg]
+      constant 7 2.0; Maximum pitch velocity operation [deg/s]
+      constant 8 0.3; Frequency of generator speed filter [Hz]   ; 2.5P
+      constant 9 0.7; Damping ratio of speed filter [-]
+      constant 10 0.0; Frequency of free-free DT torsion mode [Hz], if zero no notch filter used
+      ; Partial load control parameters
+      constant 11 0.696242E+08; Optimal Cp tracking K factor [Nm/(rad/s)^2], ;
+      ; Qg=K*Omega^2, K=eta*0.5*rho*A*Cp_opt*R^3/lambda_opt^3
+      constant 12 0.182316E+09; Proportional gain of torque controller [Nm/(rad/s)]
+      constant 13 0.245470E+08; Integral gain of torque controller [Nm/rad]
+      constant 14 0.0; Differential gain of torque controller [Nm/(rad/s^2)]
+      ;     Full load control parameters
+      constant 15 0.9; Generator control switch [1=constant power, 0=constant torque]
+      constant 16 0.517222E+00; Proportional gain of pitch controller [rad/(rad/s)]
+      constant 17 0.136896E-01; Integral gain of pitch controller [rad/rad]
+      constant 18 0.0; Differential gain of pitch controller [rad/(rad/s^2)]
+      constant 19 4e-09; Proportional power error gain [rad/W]
+      constant 20 4e-09; Integral power error gain [rad/(Ws)]
+      constant 21 11.85400; Coefficient of linear term in aerodynamic gain scheduling, KK1 [deg]
+      constant 22 551.28673; Coefficient of quadratic term in aerodynamic gain scheduling, KK2 [deg^2] &
+      ; (if zero, KK1 = pitch angle at double gain)
+      constant 23 1.5; Relative speed for double nonlinear gain [-]
+      ;     Cut-in simulation parameters
+      constant 24 -1; Cut-in time [s], no cut-in is simulated if zero or negative
+      constant 25 1.0; Time delay for soft start of torque [1/1P]
+      ;     Cut-out simulation parameters
+      constant 26 -1; Shut-down time [s], no shut-down is simulated if zero or negative
+      constant 27 5.0; Time of linear torque cut-out during a generator assisted stop [s]
+      constant 28 1; Stop type [1=normal, 2=emergency]
+      constant 29 1.0; Time delay for pitch stop after shut-down signal [s]
+      constant 30 3; Maximum pitch velocity during initial period of stop [deg/s]
+      constant 31 3.0; Time period of initial pitch stop phase [s] (maintains pitch speed specified in constant 30)
+      constant 32 4; Maximum pitch velocity during final phase of stop [deg/s]
+      ;     Expert parameters (keep default values unless otherwise given)
+      constant 33 2.0; Time for the maximum torque rate = Maximum allowable generator torque/(constant 33 + 0.01s) [s]
+      constant 34 2.0; Upper angle above lowest minimum pitch angle for switch [deg], if equal then hard switch
+      constant 35 95.0; Percentage of the rated speed when the torque limits are fully opened [%]
+      constant 36 2.0; Time constant of 1st order filter on wind speed used for minimum pitch [1/1P]
+      constant 37 1.0; Time constant of 1st order filter on pitch angle used for gain scheduling [1/1P]
+      ;     Drivetrain damper
+      constant 38 0.0; Proportional gain of active DT damper [Nm/(rad/s)], requires frequency in input 10
+      ;	  Over speed
+      constant 39 50.0; Overspeed percentage before initiating turbine controller alarm (shut-down) [%]
+      ;     Additional non-linear pitch control term (not used when all zero)
+      constant 40 0.0; Rotor speed error scaling factor [rad/s]
+      constant 41 0.0; Rotor acceleration error scaling factor [rad/s^2]
+      constant 42 0.0; Pitch rate gain [rad/s]
+      ;     Storm control command
+      constant 43 28.0; Wind speed 'Vstorm' above which derating of rotor speed is used [m/s]
+      constant 44 28.0; Cut-out wind speed (only used for derating of rotor speed in storm) [m/s]
+      ;     Safety system parameters
+      constant 45 50.0; Overspeed percentage before initiating safety system alarm (shut-down) [%]
+      constant 46 10.0; Max low-pass filtered tower top acceleration level [m/s^2]
+      ;     Turbine parameter
+      constant 47 283.9963; Nominal rotor diameter [m]
+      ;     Parameters for rotor inertia reduction in variable speed region
+      constant 48 0.0; Proportional gain on rotor acceleration in variable speed region [Nm/(rad/s^2)] (not used when zero)
+      ;     Parameters for alternative partial load controller with PI regulated TSR tracking
+      constant 49 9.634697; Optimal tip speed ratio [-] (only used when K=constant 11 = 0 otherwise  Qg=K*Omega^2 is used)
+      ;     Parameters for adding aerodynamic drivetrain damping on gain scheduling
+      constant 50 0.0; Aerodynamic DT damping coefficient at the operational point of zero pitch angle [Nm/(rad/s)] (not used when zero)
+      constant 51 0.0; Coefficient of linear term in aerodynamic DT damping scheduling, KK1 [deg]
+      constant 52 0.0; Coefficient of quadratic term in aerodynamic DT damping scheduling, KK2 [deg^2]
+      ;     Torque exclusion zone
+      constant 53 0.0; Exclusion zone: Lower speed limit [rad/s] (Default 0 used if zero)
+      constant 54 0.0; Exclusion zone: Generator torque at lower limit [Nm] (Default 0 used if zero)
+      constant 55 0.0; Exclusion zone: Upper speed limit [rad/s] (if =< 0 then exclusion zone functionality is inactive)
+      constant 56 0.0; Exclusion zone: Generator torque at upper limit [Nm] (Default 0 used if zero)
+      constant 57 0.0; Time constant of reference switching at exclusion zone [s] (Default 0 used if zero)
+      ;     DT torsion mode damper
+      constant 58 0.0; Frequency of notch filter [Hz] (Default 10 x input 10 used if zero)
+      constant 59 0.0; Damping of BP filter [-] (Default 0.02 used if zero)
+      constant 60 0.0; Damping of notch filter [-] (Default 0.01 used if zero)
+      constant 61 0.0; Phase lag of damper [s] =>  max 40*dt (Default 0 used if zero)
+      ;     Fore-aft Tower mode damper
+      constant 62 0.0; Frequency of BP filter [Hz] (Default 10 used if zero)\\
+      constant 63 0.0; Frequency of notch fiter [Hz] (Default 10 used if zero)\\
+      constant 64 0.0; Damping of BP filter [-] (Default 0.02 used if zero)\\
+      constant 65 0.0; Damping of notch filter [-] (Default 0.01 used if zero)\\
+      constant 66 0.0; Gain of damper [-] (Default 0 used if zero)\\
+      constant 67 0.0; Phase lag of damper [s] =>  max 40*dt (Default 0 used if zero)\\
+      constant 68 0.0; Time constant of 1st order filter on PWR used for fore-aft Tower mode damper GS [Hz] (Default 10 used if zero)
+      constant 69 0.0; Lower PWR limit used for fore-aft Tower mode damper GS [-] (Default 0 used if zero)
+      constant 70 0.0; Upper PWR limit used for fore-aft Tower mode damper GS [-] (Default 0 used if zero)
+      ;     Side-to-side Tower mode filter
+      constant 71 0.0; Frequency of Tower side-to-sede notch filter [Hz] (Default 100 used if zero)
+      constant 72 0.0; Damping of notch filter [-] (Default 0.01 used if zero)
+      constant 73 0.0; Max low-pass filtered tower top acceleration level before initiating safety system alarm (shut-down) [m/s^2] (Default 1.1 x input 46 used if zero)
+      constant 74 0.0; Time constant of 1st order filter on tower top acceleration [1/1P] (Default 1 used if zero)
+      ;     Pitch deviation monitor parameters
+      constant 75 1005020; Parameters for pitch deviation monitoring. The format is 1,nnn,mmm
+      ; where 'nnn' [s] is the period of the moving average and 'mmm' is threshold of the deviation [0.1 deg] (functionality is inactive if value $<$ 1,000,000)
+      ;     Gear ratio
+      constant 76     1.0 ; Gear ratio used for the calculation of the LSS rotational speeds and the HSS generator torque reference [-] (Default 1 if zero)
+      constant 77     0.0 ; Frequency of notch filter [Hz] applied on the rotor speed before computing torque above rated (constant power), if zero no notch filter used.
+      constant 78     0.0 ; Damping of notch filter [-] applied on the rotor speed before computing torque above rated (constant power), (Default 0.01 used if zero).
+      constant 79     0 ; Choice of derating strategy. 0 = No Derating, 1 = constant rotation, 2 = max rotation, 3 = minimum Ct [5] (default 0 used if zero).
+      constant 80     100.0 ; Derate percentage (eg. 70 means 70% of nominal power).
+      constant 81     0.0 ; Rotor inertia (if > 0, rotor effective wind speed estimator is activated; Set this value to zero for deactivating it)
+      constant 82     0.0 ; Rated wind speed (Only used when constant 79 = 3)
+      ; Floating additional control loop
+      constant 83     0.04; Gain for the loop mapping from tower velocity to blade pitch [rad/(m/s)]
+      constant 84     0.0; Gain for the loop mapping from tower velocity to GenTorque [Nm/(m/s)]
+      constant 85     10.0; Time to switch on the floating control loop [s]
+      constant 86     0.04; Frequency of LP filter [Hz] (Default 0 if filter not used)
+      constant 87     0.7; Damping ratio of LP filter  [-]
+      constant 88     0.0; Frequency of BP filter [Hz] (Default 0 if filter not used)
+      constant 89     0.02; Damping ratio of BP filter  [-] (Default 0.02)
+      constant 90     0.0; Time constant of BP filter [s] (Default 0)
+      constant 91     0.0; Coefficient of linear term in gain scheduling for tower-pitch loop, KK1 [1/(m/s)]; Kgain * (1 + KK1 *abs(WSPfilt - WSPrated) + KK2 * abs(WSPfilt - WSPrated)**2)
+      constant 92     0.0; Coefficient of quadratic term in gain scheduling for tower-pitch loop, KK2 [1/(m/s)^2];
+      constant 93     0.0; Coefficient of linear term in gain scheduling for tower-genTorq loop, KK1 [1/(m/s)];
+      constant 94     0.0; Coefficient of quadratic term in gain scheduling for tower-genTorq loop, KK2 [1/(m/s)^2];
+      constant 95     1.0; Choice of gain-scheduling variable (0: WSPfilt, 1:Pitch angle (Default))
+    end init;
+    begin output; 
+      general time; [s]
+      constraint bearing1 shaft_rot 1 only 2; Drivetrain speed [rad/s]
+      constraint bearing2 pitch1 1 only 1; [rad]
+      constraint bearing2 pitch2 1 only 1; [rad]
+      constraint bearing2 pitch3 1 only 1;
+      wind free_wind 1 0.0 0.0 -170.0; Global coordinates at hub height
+      dll inpvec 2 2; Elec. power from generator servo .dll
+      dll inpvec 2 8;
+      mbdy state acc towertop 1 1.0 global only 1; Tower top x-acceleration [m/s^2]
+      mbdy state acc towertop 1 1.0 global only 2;
+      general constant 0.0 ;
+      general constant 0.0 ;
+      general constant 0.0 ;
+      mbdy state vel towertop 1 1 towertop only 2 ;	  
+    end output;
+  end type2_dll;
+  begin type2_dll;   generator servo
+    name generator_servo;
+    filename ./control/generator_servo.dll;
+    dll_subroutine_init init_generator_servo;
+    dll_subroutine_update update_generator_servo;
+    arraysizes_init 100 1;
+    arraysizes_update 100 100;
+    begin init; 
+      constant 1 20.0; Frequency of 2nd order servo model of generator-converter system [Hz]
+      constant 2 0.9; Damping ratio 2nd order servo model of generator-converter system [-]
+      constant 3 44628000.0; Maximum allowable LSS torque (pull-out torque) [Nm]   ; 150% of max torque
+      constant 4 0.953; Generator efficiency [-]
+      constant 5 1.0; Gearratio [-]
+      constant 6 0.0; Time for half value in softstart of torque [s]
+      constant 7 -1;
+    end init;
+    begin output; 
+      general time;   Time [s]
+      dll inpvec 1 1;   Electrical torque reference [Nm]
+      constraint bearing1 shaft_rot 1 only 2;   Generator LSS speed [rad/s]
+      mbdy momentvec shaft 1 1 shaft only 3;   Shaft moment [kNm] (Qshaft)
+    end output;
+    begin actions; 
+      mbdy moment_int shaft 1 -3 shaft connector 2;   Generator LSS torque [Nm]
+    end actions;
+  end type2_dll;
+  begin type2_dll;   mechanical brake
+    name mech_brake;
+    filename ./control/mech_brake.dll;
+    dll_subroutine_init init_mech_brake;
+    dll_subroutine_update update_mech_brake;
+    arraysizes_init 100 1;
+    arraysizes_update 100 100;
+    begin init; 
+      constant 1 26776800.0; Fully deployed maximum brake torque [Nm] (0.6*max torque)
+      constant 2 100.0; Parameter alpha used in Q = tanh(omega*alpha), typically 1e2/Omega_nom
+      constant 3 0.5; Delay time for before brake starts to deploy [s]
+      constant 4 0.6;
+    end init;
+    begin output; 
+      general time; Time [s]
+      constraint bearing1 shaft_rot 1 only 2; Generator LSS speed [rad/s]
+      dll inpvec 1 25; Command to deploy mechanical disc brake [0,1]
+    end output;
+    begin actions; 
+      mbdy moment_int shaft 1 3 shaft connector 2;   Brake LSS torque [Nm]
+    end actions;
+  end type2_dll;
+  begin type2_dll;   pitch servo
+    name servo_with_limits;
+    filename ./control/servo_with_limits.dll;
+    dll_subroutine_init init_servo_with_limits;
+    dll_subroutine_update update_servo_with_limits;
+    arraysizes_init 100 1;
+    arraysizes_update 100 100;
+    begin init; 
+      constant 1 3; Number of blades [-]
+      constant 2 1.0; Frequency of 2nd order servo model of pitch system [Hz]
+      constant 3 0.7; Damping ratio 2nd order servo model of pitch system [-]
+      constant 4 2.0; Max. pitch speed [deg/s]
+      constant 5 15.0; Max. pitch acceleration [deg/s^2]
+      constant 6 -5.0; Min. pitch angle [deg]
+      constant 7 90.0; Max. pitch angle [deg]
+      constant 8 -1; Time for pitch runaway [s]
+      constant 9 -1; Time for stuck blade 1 [s]
+      constant 10 0.0;
+    end init;
+    begin output; 
+      general time;  Time                         [s]
+      dll inpvec 1 2;  Pitch1 demand angle          [rad]
+      dll inpvec 1 3;  Pitch2 demand angle          [rad]
+      dll inpvec 1 4;  Pitch3 demand angle          [rad]
+      dll inpvec 1 26;
+    end output;
+    begin actions; 
+      constraint bearing2 angle pitch1; Angle pitch1 bearing    [rad]
+      constraint bearing2 angle pitch2; Angle pitch2 bearing    [rad]
+      constraint bearing2 angle pitch3;
+    end actions;
+  end type2_dll;
+  begin type2_dll;   tower-blade-tip distance
+    name towerclearance_mblade;
+    filename ./control/towerclearance_mblade.dll;
+    dll_subroutine_init initialize;
+    dll_subroutine_update update;
+    arraysizes_init 3 1;
+    arraysizes_update 15 6;
+    begin init;     Variables passed into initialization function
+      constant 1 6.0; Tower radius at tower bottom [m]
+      constant 2 3.5; Tower radius at tower top [m]
+      constant 3 3;
+    end init;
+    begin output;    Variables passed into update function
+      mbdy state pos tower 1 0.0 global; [1,2,3] global coordinates of tower base
+      mbdy state pos tower 30 1.0 global; [4,5,6] global coordinates of tower top
+      mbdy state pos blade1 29 1.0 global; [7,8,9] global coordinates of point 1 (blade 1 tip)
+      mbdy state pos blade2 29 1.0 global; [10,11,12] global coordinates of point 2 (blade 2 tip)
+      mbdy state pos blade3 29 1.0 global;
+    end output;
+  end type2_dll;
+end dll;
+;
+begin output; 
+  filename ./res/iea_22mw_rwt_floater_steps;
+  data_format hawc_binary;
+  buffer 1;
+  time 0.0 1200.0;
+  general time;
+  ;
+  constraint bearing1 shaft_rot 2; angle and angle velocity
+  constraint bearing2 pitch1 5;    angle and angular velocity
+  constraint bearing2 pitch2 5;    angle and angular velocity
+  constraint bearing2 pitch3 5;
+  ;
+    wind free_wind 1 0.0 0.0 -170.0;
+  ;
+  aero omega;
+  aero torque;
+  aero power;
+  aero thrust;
+  ;
+  aero alfa 1 0.0;
+  aero alfa 1 2.766034281569981;
+  aero alfa 1 6.915101133550727;
+  aero alfa 1 12.101464060347455;
+  aero alfa 1 17.28784322868333;
+  aero alfa 1 22.474215535433128;
+  aero alfa 1 27.660565810484524;
+  aero alfa 1 32.84689033264432;
+  aero alfa 1 38.03320060609064;
+  aero alfa 1 43.219510623819794;
+  aero alfa 1 48.405821830390856;
+  aero alfa 1 53.59209774241779;
+  aero alfa 1 58.778292380435566;
+  aero alfa 1 63.9643521561483;
+  aero alfa 1 69.15022095266576; 
+  aero alfa 1 74.33588233800324;
+  aero alfa 1 79.52138393557735;
+  aero alfa 1 84.70692067827034;
+  aero alfa 1 89.8929075061904;
+  aero alfa 1 95.08007336178545; 
+  aero alfa 1 100.26956326606629;
+  aero alfa 1 105.46304778246201;
+  aero alfa 1 110.66280852516212;
+  aero alfa 1 115.87137503335182;
+  aero alfa 1 121.0915408973123;
+  aero alfa 1 126.3235630336928;
+  aero alfa 1 131.55929571934922;
+  aero alfa 1 135.71641518853994;
+  aero alfa 1 137.0699316515965;
+  aero alfa 1 138.4050286151652;
+  ;
+  aero vrel 1 0.0;
+  aero vrel 1 2.766034281569981;
+  aero vrel 1 6.915101133550727;
+  aero vrel 1 12.101464060347455;
+  aero vrel 1 17.28784322868333;
+  aero vrel 1 22.474215535433128;
+  aero vrel 1 27.660565810484524;
+  aero vrel 1 32.84689033264432;
+  aero vrel 1 38.03320060609064;
+  aero vrel 1 43.219510623819794;
+  aero vrel 1 48.405821830390856;
+  aero vrel 1 53.59209774241779;
+  aero vrel 1 58.778292380435566;
+  aero vrel 1 63.9643521561483;
+  aero vrel 1 69.15022095266576; 
+  aero vrel 1 74.33588233800324;
+  aero vrel 1 79.52138393557735;
+  aero vrel 1 84.70692067827034;
+  aero vrel 1 89.8929075061904;
+  aero vrel 1 95.08007336178545; 
+  aero vrel 1 100.26956326606629;
+  aero vrel 1 105.46304778246201;
+  aero vrel 1 110.66280852516212;
+  aero vrel 1 115.87137503335182;
+  aero vrel 1 121.0915408973123;
+  aero vrel 1 126.3235630336928;
+  aero vrel 1 131.55929571934922;
+  aero vrel 1 135.71641518853994;
+  aero vrel 1 137.0699316515965;
+  aero vrel 1 138.4050286151652;
+  ;
+  aero cl 1 0.0;
+  aero cl 1 2.766034281569981;
+  aero cl 1 6.915101133550727;
+  aero cl 1 12.101464060347455;
+  aero cl 1 17.28784322868333;
+  aero cl 1 22.474215535433128;
+  aero cl 1 27.660565810484524;
+  aero cl 1 32.84689033264432;
+  aero cl 1 38.03320060609064;
+  aero cl 1 43.219510623819794;
+  aero cl 1 48.405821830390856;
+  aero cl 1 53.59209774241779;
+  aero cl 1 58.778292380435566;
+  aero cl 1 63.9643521561483;
+  aero cl 1 69.15022095266576; 
+  aero cl 1 74.33588233800324;
+  aero cl 1 79.52138393557735;
+  aero cl 1 84.70692067827034;
+  aero cl 1 89.8929075061904;
+  aero cl 1 95.08007336178545; 
+  aero cl 1 100.26956326606629;
+  aero cl 1 105.46304778246201;
+  aero cl 1 110.66280852516212;
+  aero cl 1 115.87137503335182;
+  aero cl 1 121.0915408973123;
+  aero cl 1 126.3235630336928;
+  aero cl 1 131.55929571934922;
+  aero cl 1 135.71641518853994;
+  aero cl 1 137.0699316515965;
+  aero cl 1 138.4050286151652;
+  ;
+  aero cd 1 0.0;
+  aero cd 1 2.766034281569981;
+  aero cd 1 6.915101133550727;
+  aero cd 1 12.101464060347455;
+  aero cd 1 17.28784322868333;
+  aero cd 1 22.474215535433128;
+  aero cd 1 27.660565810484524;
+  aero cd 1 32.84689033264432;
+  aero cd 1 38.03320060609064;
+  aero cd 1 43.219510623819794;
+  aero cd 1 48.405821830390856;
+  aero cd 1 53.59209774241779;
+  aero cd 1 58.778292380435566;
+  aero cd 1 63.9643521561483;
+  aero cd 1 69.15022095266576; 
+  aero cd 1 74.33588233800324;
+  aero cd 1 79.52138393557735;
+  aero cd 1 84.70692067827034;
+  aero cd 1 89.8929075061904;
+  aero cd 1 95.08007336178545; 
+  aero cd 1 100.26956326606629;
+  aero cd 1 105.46304778246201;
+  aero cd 1 110.66280852516212;
+  aero cd 1 115.87137503335182;
+  aero cd 1 121.0915408973123;
+  aero cd 1 126.3235630336928;
+  aero cd 1 131.55929571934922;
+  aero cd 1 135.71641518853994;
+  aero cd 1 137.0699316515965;
+  aero cd 1 138.4050286151652;
+  ;
+  aero secforce 1 1 0.0 4;
+  aero secforce 1 1 2.766034281569981 4;
+  aero secforce 1 1 6.915101133550727 4;
+  aero secforce 1 1 12.101464060347455 4;
+  aero secforce 1 1 17.28784322868333 4;
+  aero secforce 1 1 22.474215535433128 4;
+  aero secforce 1 1 27.660565810484524 4;
+  aero secforce 1 1 32.84689033264432 4;
+  aero secforce 1 1 38.03320060609064 4;
+  aero secforce 1 1 43.219510623819794 4;
+  aero secforce 1 1 48.405821830390856 4;
+  aero secforce 1 1 53.59209774241779 4;
+  aero secforce 1 1 58.778292380435566 4;
+  aero secforce 1 1 63.9643521561483 4;
+  aero secforce 1 1 69.15022095266576  4;
+  aero secforce 1 1 74.33588233800324 4;
+  aero secforce 1 1 79.52138393557735 4;
+  aero secforce 1 1 84.70692067827034 4;
+  aero secforce 1 1 89.8929075061904 4;
+  aero secforce 1 1 95.08007336178545  4;
+  aero secforce 1 1 100.26956326606629 4;
+  aero secforce 1 1 105.46304778246201 4;
+  aero secforce 1 1 110.66280852516212 4;
+  aero secforce 1 1 115.87137503335182 4;
+  aero secforce 1 1 121.0915408973123 4;
+  aero secforce 1 1 126.3235630336928 4;
+  aero secforce 1 1 131.55929571934922 4;
+  aero secforce 1 1 135.71641518853994 4;
+  aero secforce 1 1 137.0699316515965 4;
+  aero secforce 1 1 138.4050286151652 4;
+  ;
+  aero secforce 1 2 0.0 4;
+  aero secforce 1 2 2.766034281569981 4;
+  aero secforce 1 2 6.915101133550727 4;
+  aero secforce 1 2 12.101464060347455 4;
+  aero secforce 1 2 17.28784322868333 4;
+  aero secforce 1 2 22.474215535433128 4;
+  aero secforce 1 2 27.660565810484524 4;
+  aero secforce 1 2 32.84689033264432 4;
+  aero secforce 1 2 38.03320060609064 4;
+  aero secforce 1 2 43.219510623819794 4;
+  aero secforce 1 2 48.405821830390856 4;
+  aero secforce 1 2 53.59209774241779 4;
+  aero secforce 1 2 58.778292380435566 4;
+  aero secforce 1 2 63.9643521561483 4;
+  aero secforce 1 2 69.15022095266576  4;
+  aero secforce 1 2 74.33588233800324 4;
+  aero secforce 1 2 79.52138393557735 4;
+  aero secforce 1 2 84.70692067827034 4;
+  aero secforce 1 2 89.8929075061904 4;
+  aero secforce 1 2 95.08007336178545  4;
+  aero secforce 1 2 100.26956326606629 4;
+  aero secforce 1 2 105.46304778246201 4;
+  aero secforce 1 2 110.66280852516212 4;
+  aero secforce 1 2 115.87137503335182 4;
+  aero secforce 1 2 121.0915408973123 4;
+  aero secforce 1 2 126.3235630336928 4;
+  aero secforce 1 2 131.55929571934922 4;
+  aero secforce 1 2 135.71641518853994 4;
+  aero secforce 1 2 137.0699316515965 4;
+  aero secforce 1 2 138.4050286151652 4;
+  ;
+  mbdy momentvec tower 1 1 tower # tower base;
+  mbdy momentvec tower 30 2 tower # tower yaw bearing;
+  mbdy momentvec shaft 1 1 shaft # main bearing;
+  mbdy momentvec blade1 1 1 blade1 # blade 1 root;
+  mbdy momentvec blade2 1 1 blade2 # blade 2 root;
+  mbdy momentvec blade3 1 1 blade3 # blade 3 root;
+  ;
+  mbdy state pos tower 30 1.0 global only 1 # Tower top FA displ;
+  mbdy state pos tower 30 1.0 global only 2 # Tower top SS displ;
+  mbdy state acc tower 30 1.0 global only 1 # Tower top FA acc;
+  mbdy state acc tower 30 1.0 global only 2 # Tower top SS acc;
+  mbdy state pos blade1 29 1.0 blade1 # blade 1 tip pos;
+  mbdy state pos blade2 29 1.0 blade2 # blade 2 tip pos;
+  mbdy state pos blade3 29 1.0 blade3 # blade 3 tip pos;
+  ;
+  mbdy momentvec blade1 1 1 blade1 # blade root moment blade1;
+  mbdy momentvec blade1 2 1 blade1 # blade moment blade1 node 2;
+  mbdy momentvec blade1 3 1 blade1 # blade moment blade1 node 3;
+  mbdy momentvec blade1 4 1 blade1 # blade moment blade1 node 4;
+  mbdy momentvec blade1 5 1 blade1 # blade moment blade1 node 5;
+  mbdy momentvec blade1 6 1 blade1 # blade moment blade1 node 6;
+  mbdy momentvec blade1 7 1 blade1 # blade moment blade1 node 7;
+  mbdy momentvec blade1 8 1 blade1 # blade moment blade1 node 8;
+  mbdy momentvec blade1 9 1 blade1 # blade moment blade1 node 9;
+  mbdy momentvec blade1 10 1 blade1 # blade moment blade1 node 10;
+  mbdy momentvec blade1 11 1 blade1 # blade moment blade1 node 11;
+  mbdy momentvec blade1 12 1 blade1 # blade moment blade1 node 12;
+  mbdy momentvec blade1 13 1 blade1 # blade moment blade1 node 13;
+  mbdy momentvec blade1 14 1 blade1 # blade moment blade1 node 14;
+  mbdy momentvec blade1 15 1 blade1 # blade moment blade1 node 15;
+  mbdy momentvec blade1 16 1 blade1 # blade moment blade1 node 16;
+  mbdy momentvec blade1 17 1 blade1 # blade moment blade1 node 17;
+  mbdy momentvec blade1 18 1 blade1 # blade moment blade1 node 18;
+  mbdy momentvec blade1 19 1 blade1 # blade moment blade1 node 19;
+  mbdy momentvec blade1 20 1 blade1 # blade moment blade1 node 20;
+  mbdy momentvec blade1 21 1 blade1 # blade moment blade1 node 21;
+  mbdy momentvec blade1 22 1 blade1 # blade moment blade1 node 22;
+  mbdy momentvec blade1 23 1 blade1 # blade moment blade1 node 23;
+  mbdy momentvec blade1 24 1 blade1 # blade moment blade1 node 24;
+  mbdy momentvec blade1 25 1 blade1 # blade moment blade1 node 25;
+  mbdy momentvec blade1 26 1 blade1 # blade moment blade1 node 26;
+  mbdy momentvec blade1 27 1 blade1 # blade moment blade1 node 27;
+  mbdy momentvec blade1 28 1 blade1 # blade moment blade1 node 28;
+  mbdy momentvec blade1 29 1 blade1 # blade moment blade1 node 29;  
+  mbdy momentvec blade2 1 1 blade2 # blade root moment blade2;
+  mbdy momentvec blade2 2 1 blade2 # blade moment blade2 node 2;
+  mbdy momentvec blade2 3 1 blade2 # blade moment blade2 node 3;
+  mbdy momentvec blade2 4 1 blade2 # blade moment blade2 node 4;
+  mbdy momentvec blade2 5 1 blade2 # blade moment blade2 node 5;
+  mbdy momentvec blade2 6 1 blade2 # blade moment blade2 node 6;
+  mbdy momentvec blade2 7 1 blade2 # blade moment blade2 node 7;
+  mbdy momentvec blade2 8 1 blade2 # blade moment blade2 node 8;
+  mbdy momentvec blade2 9 1 blade2 # blade moment blade2 node 9;
+  mbdy momentvec blade2 10 1 blade2 # blade moment blade2 node 10;
+  mbdy momentvec blade2 11 1 blade2 # blade moment blade2 node 11;
+  mbdy momentvec blade2 12 1 blade2 # blade moment blade2 node 12;
+  mbdy momentvec blade2 13 1 blade2 # blade moment blade2 node 13;
+  mbdy momentvec blade2 14 1 blade2 # blade moment blade2 node 14;
+  mbdy momentvec blade2 15 1 blade2 # blade moment blade2 node 15;
+  mbdy momentvec blade2 16 1 blade2 # blade moment blade2 node 16;
+  mbdy momentvec blade2 17 1 blade2 # blade moment blade2 node 17;
+  mbdy momentvec blade2 18 1 blade2 # blade moment blade2 node 18;
+  mbdy momentvec blade2 19 1 blade2 # blade moment blade2 node 19;
+  mbdy momentvec blade2 20 1 blade2 # blade moment blade2 node 20;
+  mbdy momentvec blade2 21 1 blade2 # blade moment blade2 node 21;
+  mbdy momentvec blade2 22 1 blade2 # blade moment blade2 node 22;
+  mbdy momentvec blade2 23 1 blade2 # blade moment blade2 node 23;
+  mbdy momentvec blade2 24 1 blade2 # blade moment blade2 node 24;
+  mbdy momentvec blade2 25 1 blade2 # blade moment blade2 node 25;
+  mbdy momentvec blade2 26 1 blade2 # blade moment blade2 node 26;
+  mbdy momentvec blade2 27 1 blade2 # blade moment blade2 node 27;
+  mbdy momentvec blade2 28 1 blade2 # blade moment blade2 node 28;
+  mbdy momentvec blade2 29 1 blade2 # blade moment blade2 node 29;
+  mbdy momentvec blade3 1 1 blade3 # blade root moment blade3;
+  mbdy momentvec blade3 2 1 blade3 # blade moment blade3 node 2;
+  mbdy momentvec blade3 3 1 blade3 # blade moment blade3 node 3;
+  mbdy momentvec blade3 4 1 blade3 # blade moment blade3 node 4;
+  mbdy momentvec blade3 5 1 blade3 # blade moment blade3 node 5;
+  mbdy momentvec blade3 6 1 blade3 # blade moment blade3 node 6;
+  mbdy momentvec blade3 7 1 blade3 # blade moment blade3 node 7;
+  mbdy momentvec blade3 8 1 blade3 # blade moment blade3 node 8;
+  mbdy momentvec blade3 9 1 blade3 # blade moment blade3 node 9;
+  mbdy momentvec blade3 10 1 blade3 # blade moment blade3 node 10;
+  mbdy momentvec blade3 11 1 blade3 # blade moment blade3 node 11;
+  mbdy momentvec blade3 12 1 blade3 # blade moment blade3 node 12;
+  mbdy momentvec blade3 13 1 blade3 # blade moment blade3 node 13;
+  mbdy momentvec blade3 14 1 blade3 # blade moment blade3 node 14;
+  mbdy momentvec blade3 15 1 blade3 # blade moment blade3 node 15;
+  mbdy momentvec blade3 16 1 blade3 # blade moment blade3 node 16;
+  mbdy momentvec blade3 17 1 blade3 # blade moment blade3 node 17;
+  mbdy momentvec blade3 18 1 blade3 # blade moment blade3 node 18;
+  mbdy momentvec blade3 19 1 blade3 # blade moment blade3 node 19;
+  mbdy momentvec blade3 20 1 blade3 # blade moment blade3 node 20;
+  mbdy momentvec blade3 21 1 blade3 # blade moment blade3 node 21;
+  mbdy momentvec blade3 22 1 blade3 # blade moment blade3 node 22;
+  mbdy momentvec blade3 23 1 blade3 # blade moment blade3 node 23;
+  mbdy momentvec blade3 24 1 blade3 # blade moment blade3 node 24;
+  mbdy momentvec blade3 25 1 blade3 # blade moment blade3 node 25;
+  mbdy momentvec blade3 26 1 blade3 # blade moment blade3 node 26;
+  mbdy momentvec blade3 27 1 blade3 # blade moment blade3 node 27;
+  mbdy momentvec blade3 28 1 blade3 # blade moment blade3 node 28;
+  mbdy momentvec blade3 29 1 blade3 # blade moment blade3 node 29; 
+  ;
+  mbdy forcevec blade1 1 1 blade1 # blade root force blade1;
+  mbdy forcevec blade1 2 1 blade1 # blade force blade1 node 2;
+  mbdy forcevec blade1 3 1 blade1 # blade force blade1 node 3;
+  mbdy forcevec blade1 4 1 blade1 # blade force blade1 node 4;
+  mbdy forcevec blade1 5 1 blade1 # blade force blade1 node 5;
+  mbdy forcevec blade1 6 1 blade1 # blade force blade1 node 6;
+  mbdy forcevec blade1 7 1 blade1 # blade force blade1 node 7;
+  mbdy forcevec blade1 8 1 blade1 # blade force blade1 node 8;
+  mbdy forcevec blade1 9 1 blade1 # blade force blade1 node 9;
+  mbdy forcevec blade1 10 1 blade1 # blade force blade1 node 10;
+  mbdy forcevec blade1 11 1 blade1 # blade force blade1 node 11;
+  mbdy forcevec blade1 12 1 blade1 # blade force blade1 node 12;
+  mbdy forcevec blade1 13 1 blade1 # blade force blade1 node 13;
+  mbdy forcevec blade1 14 1 blade1 # blade force blade1 node 14;
+  mbdy forcevec blade1 15 1 blade1 # blade force blade1 node 15;
+  mbdy forcevec blade1 16 1 blade1 # blade force blade1 node 16;
+  mbdy forcevec blade1 17 1 blade1 # blade force blade1 node 17;
+  mbdy forcevec blade1 18 1 blade1 # blade force blade1 node 18;
+  mbdy forcevec blade1 19 1 blade1 # blade force blade1 node 19;
+  mbdy forcevec blade1 20 1 blade1 # blade force blade1 node 20;
+  mbdy forcevec blade1 21 1 blade1 # blade force blade1 node 21;
+  mbdy forcevec blade1 22 1 blade1 # blade force blade1 node 22;
+  mbdy forcevec blade1 23 1 blade1 # blade force blade1 node 23;
+  mbdy forcevec blade1 24 1 blade1 # blade force blade1 node 24;
+  mbdy forcevec blade1 25 1 blade1 # blade force blade1 node 25;
+  mbdy forcevec blade1 26 1 blade1 # blade force blade1 node 26;
+  mbdy forcevec blade1 27 1 blade1 # blade force blade1 node 27;
+  mbdy forcevec blade1 28 1 blade1 # blade force blade1 node 28;
+  mbdy forcevec blade1 29 1 blade1 # blade force blade1 node 29;  
+  mbdy forcevec blade2 1 1 blade2 # blade root force blade2;
+  mbdy forcevec blade2 2 1 blade2 # blade force blade2 node 2;
+  mbdy forcevec blade2 3 1 blade2 # blade force blade2 node 3;
+  mbdy forcevec blade2 4 1 blade2 # blade force blade2 node 4;
+  mbdy forcevec blade2 5 1 blade2 # blade force blade2 node 5;
+  mbdy forcevec blade2 6 1 blade2 # blade force blade2 node 6;
+  mbdy forcevec blade2 7 1 blade2 # blade force blade2 node 7;
+  mbdy forcevec blade2 8 1 blade2 # blade force blade2 node 8;
+  mbdy forcevec blade2 9 1 blade2 # blade force blade2 node 9;
+  mbdy forcevec blade2 10 1 blade2 # blade force blade2 node 10;
+  mbdy forcevec blade2 11 1 blade2 # blade force blade2 node 11;
+  mbdy forcevec blade2 12 1 blade2 # blade force blade2 node 12;
+  mbdy forcevec blade2 13 1 blade2 # blade force blade2 node 13;
+  mbdy forcevec blade2 14 1 blade2 # blade force blade2 node 14;
+  mbdy forcevec blade2 15 1 blade2 # blade force blade2 node 15;
+  mbdy forcevec blade2 16 1 blade2 # blade force blade2 node 16;
+  mbdy forcevec blade2 17 1 blade2 # blade force blade2 node 17;
+  mbdy forcevec blade2 18 1 blade2 # blade force blade2 node 18;
+  mbdy forcevec blade2 19 1 blade2 # blade force blade2 node 19;
+  mbdy forcevec blade2 20 1 blade2 # blade force blade2 node 20;
+  mbdy forcevec blade2 21 1 blade2 # blade force blade2 node 21;
+  mbdy forcevec blade2 22 1 blade2 # blade force blade2 node 22;
+  mbdy forcevec blade2 23 1 blade2 # blade force blade2 node 23;
+  mbdy forcevec blade2 24 1 blade2 # blade force blade2 node 24;
+  mbdy forcevec blade2 25 1 blade2 # blade force blade2 node 25;
+  mbdy forcevec blade2 26 1 blade2 # blade force blade2 node 26;
+  mbdy forcevec blade2 27 1 blade2 # blade force blade2 node 27;
+  mbdy forcevec blade2 28 1 blade2 # blade force blade2 node 28;
+  mbdy forcevec blade2 29 1 blade2 # blade force blade2 node 29;
+  mbdy forcevec blade3 1 1 blade3 # blade root force blade3;
+  mbdy forcevec blade3 2 1 blade3 # blade force blade3 node 2;
+  mbdy forcevec blade3 3 1 blade3 # blade force blade3 node 3;
+  mbdy forcevec blade3 4 1 blade3 # blade force blade3 node 4;
+  mbdy forcevec blade3 5 1 blade3 # blade force blade3 node 5;
+  mbdy forcevec blade3 6 1 blade3 # blade force blade3 node 6;
+  mbdy forcevec blade3 7 1 blade3 # blade force blade3 node 7;
+  mbdy forcevec blade3 8 1 blade3 # blade force blade3 node 8;
+  mbdy forcevec blade3 9 1 blade3 # blade force blade3 node 9;
+  mbdy forcevec blade3 10 1 blade3 # blade force blade3 node 10;
+  mbdy forcevec blade3 11 1 blade3 # blade force blade3 node 11;
+  mbdy forcevec blade3 12 1 blade3 # blade force blade3 node 12;
+  mbdy forcevec blade3 13 1 blade3 # blade force blade3 node 13;
+  mbdy forcevec blade3 14 1 blade3 # blade force blade3 node 14;
+  mbdy forcevec blade3 15 1 blade3 # blade force blade3 node 15;
+  mbdy forcevec blade3 16 1 blade3 # blade force blade3 node 16;
+  mbdy forcevec blade3 17 1 blade3 # blade force blade3 node 17;
+  mbdy forcevec blade3 18 1 blade3 # blade force blade3 node 18;
+  mbdy forcevec blade3 19 1 blade3 # blade force blade3 node 19;
+  mbdy forcevec blade3 20 1 blade3 # blade force blade3 node 20;
+  mbdy forcevec blade3 21 1 blade3 # blade force blade3 node 21;
+  mbdy forcevec blade3 22 1 blade3 # blade force blade3 node 22;
+  mbdy forcevec blade3 23 1 blade3 # blade force blade3 node 23;
+  mbdy forcevec blade3 24 1 blade3 # blade force blade3 node 24;
+  mbdy forcevec blade3 25 1 blade3 # blade force blade3 node 25;
+  mbdy forcevec blade3 26 1 blade3 # blade force blade3 node 26;
+  mbdy forcevec blade3 27 1 blade3 # blade force blade3 node 27;
+  mbdy forcevec blade3 28 1 blade3 # blade force blade3 node 28;
+  mbdy forcevec blade3 29 1 blade3 # blade force blade3 node 29;
+  ;
+  mbdy statevec_new  blade1  c2def  blade1  elastic  5.1158032131531515e-12  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  2.7660328691869096  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  6.915221488935337  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  12.101781109460003  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  17.28830275762805  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  22.474657837141567  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  27.660781509361573  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  32.846788351036615  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  38.032941953075266  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  43.21914400370442  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  48.405383052602346  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  56 53.591662118368611  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  58.77789871608423  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  63.964020636162296  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  69.14989385312819  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  74.3355116165983  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  79.52071694611804  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  84.70537808387576  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  89.8893048745549  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  95.07221473916263  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  100.25367686570951  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  105.43303448131368  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  110.60927108007752  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  115.78039217720674  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  120.94314649349835  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  126.08987289888181  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  131.20215539485008  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  135.22376768533667  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade1  c2def  blade1  elastic  136.5230058770576  1.d0  0.0 0.0;
+  mbdy statevec_new  blade1  c2def  blade1  elastic  137.79813187143728  1.d0  0.0 0.0;
+  mbdy statevec_new  blade2  c2def  blade2  elastic  5.1158032131531515e-12  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  2.7660328691869096  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  6.915221488935337  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  12.101781109460003  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  17.28830275762805  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  22.474657837141567  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  27.660781509361573  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  32.846788351036615  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  38.032941953075266  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  43.21914400370442  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  48.405383052602346  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  56 53.591662118368611  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  58.77789871608423  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  63.964020636162296  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  69.14989385312819  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  74.3355116165983  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  79.52071694611804  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  84.70537808387576  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  89.8893048745549  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  95.07221473916263  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  100.25367686570951  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  105.43303448131368  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  110.60927108007752  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  115.78039217720674  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  120.94314649349835  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  126.08987289888181  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  131.20215539485008  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  135.22376768533667  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade2  c2def  blade2  elastic  136.5230058770576  1.d0  0.0 0.0;
+  mbdy statevec_new  blade2  c2def  blade2  elastic  137.79813187143728  1.d0  0.0 0.0;
+  mbdy statevec_new  blade3  c2def  blade3  elastic  5.1158032131531515e-12  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  2.7660328691869096  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  6.915221488935337  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  12.101781109460003  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  17.28830275762805  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  22.474657837141567  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  27.660781509361573  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  32.846788351036615  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  38.032941953075266  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  43.21914400370442  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  48.405383052602346  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  56 53.591662118368611  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  58.77789871608423  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  63.964020636162296  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  69.14989385312819  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  74.3355116165983  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  79.52071694611804  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  84.70537808387576  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  89.8893048745549  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  95.07221473916263  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  100.25367686570951  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  105.43303448131368  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  110.60927108007752  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  115.78039217720674  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  120.94314649349835  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  126.08987289888181  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  131.20215539485008  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  135.22376768533667  1.d0  0.0 0.0; 
+  mbdy statevec_new  blade3  c2def  blade3  elastic  136.5230058770576  1.d0  0.0 0.0;
+  mbdy statevec_new  blade3  c2def  blade3  elastic  137.79813187143728  1.d0  0.0 0.0;  
+  ;
+  dll inpvec 1 1 # Generator torque reference [Nm];
+  dll inpvec 1 2 # Pitch angle reference of blade 1 [rad];
+  dll inpvec 1 3 # Pitch angle reference of blade 2 [rad];
+  dll inpvec 1 4 # Pitch angle reference of blade 3 [rad];
+  dll inpvec 1 5 # Power reference [W];
+  dll inpvec 1 6 # Filtered wind speed [m/s];
+  dll inpvec 1 7 # Filtered rotor speed [rad/s];
+  dll inpvec 1 8 # Filtered rotor speed error for torque [rad/s];
+  dll inpvec 1 9 # Bandpass filtered rotor speed [rad/s];
+  dll inpvec 1 10 # Proportional term of torque contr. [Nm];
+  dll inpvec 1 11 # Integral term of torque controller [Nm];
+  dll inpvec 1 12 # Minimum limit of torque [Nm];
+  dll inpvec 1 13 # Maximum limit of torque [Nm];
+  dll inpvec 1 14 # Torque limit switch based on pitch [-];
+  dll inpvec 1 15 # Filtered rotor speed error for pitch [rad/s];
+  dll inpvec 1 16 # Power error for pitch [W];
+  dll inpvec 1 17 # Proportional term of pitch controller [rad];
+  dll inpvec 1 18 # Integral term of pitch controller [rad];
+  dll inpvec 1 19 # Minimum limit of pitch [rad];
+  dll inpvec 1 20 # Maximum limit of pitch [rad];
+  dll inpvec 1 21 # Torque reference from DT dammper [Nm];
+  dll inpvec 1 22 # Status signal [-];
+  dll inpvec 1 23 # Total added pitch rate [rad/s];
+  dll inpvec 1 24 # Filtered Mean pitch for gain sch [rad];
+  dll inpvec 1 25 # Flag for mechnical brake [0=off/1=on];
+  dll inpvec 1 26 # Flag for emergency pitch stop [0=off/1=on];
+  dll inpvec 1 27 # LP filtered acceleration level [m/s^2];
+  dll inpvec 1 31 # Monitored average of reference pitch [rad];
+  dll inpvec 1 32 # Monitored ave. of actual pitch (blade 1) [rad];
+  ;
+  dll inpvec 2 1 # Mgen LSS [Nm];
+  dll inpvec 2 2 # Pelec [W];
+  dll inpvec 2 3 # Mframe [Nm];
+  dll inpvec 2 4 # Mgen HSS [Nm];
+  dll inpvec 2 8 # Grid flag [0=run/1=stop];
+  ;
+  dll inpvec 3 1 # Brake torque [Nm];
+  ;
+  dll inpvec 4 1 # pitch 1 [rad];
+  dll inpvec 4 2 # pitch 2 [rad];
+  dll inpvec 4 3 # pitch 3 [rad];
+  ;
+  dll inpvec 5 1 # Bltip tow min d [m];
+  ;
+  mbdy state pos ifb 1 0.0 global # floater displ;
+  mbdy state_rot eulerang_xyz ifb 1 0.0 global # floater rotation;  
+  esys floater ;
+  esys line1 ;
+  esys line2 ;
+  esys line3 ;
+  hydro water_vel_acc 0.0 0.0 10.0 ;
+;	 
+end output;
+;
+exit ;
