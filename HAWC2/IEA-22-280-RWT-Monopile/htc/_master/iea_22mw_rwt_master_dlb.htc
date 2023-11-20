@@ -535,12 +535,12 @@ begin dll;
       constraint bearing1 shaft_rot 1 only 2; Drivetrain speed [rad/s]
       constraint bearing2 pitch1 1 only 1; [rad]
       constraint bearing2 pitch2 1 only 1; [rad]
-      constraint bearing2 pitch3 1 only 1;
+      constraint bearing2 pitch3 1 only 1; [rad]
       wind free_wind 1 0.0 0.0 -170.0; Global coordinates at hub height
       dll inpvec 2 2; Elec. power from generator servo .dll
-      dll inpvec 2 8;
+      dll inpvec 2 8; Grid flag
       mbdy state acc towertop 1 1.0 global only 1; Tower top x-acceleration [m/s^2]
-      mbdy state acc towertop 1 1.0 global only 2;
+      mbdy state acc towertop 1 1.0 global only 2; Tower top y-acceleration [m/s^2]
     end output;
   end type2_dll;
   begin type2_dll;   generator servo
@@ -580,7 +580,7 @@ begin dll;
       constant 1 26776800.0; Fully deployed maximum brake torque [Nm] (0.6*max torque)
       constant 2 100.0; Parameter alpha used in Q = tanh(omega*alpha), typically 1e2/Omega_nom
       constant 3 0.5; Delay time for before brake starts to deploy [s]
-      constant 4 0.6;
+      constant 4 0.6; Time for brake to become fully deployed [s] 
     end init;
     begin output; 
       general time; Time [s]
@@ -608,19 +608,19 @@ begin dll;
       constant 7 90.0; Max. pitch angle [deg]
       constant 8 [Time pitch runaway]; Time for pitch runaway [s]
       constant 9 [Time stuck DLC22b]; Time for stuck blade 1 [s]
-      constant 10 [Pitch 1 DLC22b];
+      constant 10 [Pitch 1 DLC22b]; Angle of stuck blade 1 [deg] (if > 90 deg then blade is stuck at instantaneous angle)
     end init;
     begin output; 
       general time;  Time                         [s]
       dll inpvec 1 2;  Pitch1 demand angle          [rad]
       dll inpvec 1 3;  Pitch2 demand angle          [rad]
       dll inpvec 1 4;  Pitch3 demand angle          [rad]
-      dll inpvec 1 26;
+      dll inpvec 1 26;  Flag for emergency pitch stop         [0=off/1=on] 
     end output;
     begin actions; 
       constraint bearing2 angle pitch1; Angle pitch1 bearing    [rad]
       constraint bearing2 angle pitch2; Angle pitch2 bearing    [rad]
-      constraint bearing2 angle pitch3;
+      constraint bearing2 angle pitch3; Angle pitch3 bearing    [rad]
     end actions;
   end type2_dll;
   begin type2_dll;   tower-blade-tip distance
@@ -633,14 +633,14 @@ begin dll;
     begin init;     Variables passed into initialization function
       constant 1 6.0; Tower radius at tower bottom [m]
       constant 2 3.5; Tower radius at tower top [m]
-      constant 3 3;
+      constant 3 3; Number of points to check [-]
     end init;
     begin output;    Variables passed into update function
       mbdy state pos tower 1 0.0 global; [1,2,3] global coordinates of tower base
       mbdy state pos tower 30 1.0 global; [4,5,6] global coordinates of tower top
       mbdy state pos blade1 29 1.0 global; [7,8,9] global coordinates of point 1 (blade 1 tip)
       mbdy state pos blade2 29 1.0 global; [10,11,12] global coordinates of point 2 (blade 2 tip)
-      mbdy state pos blade3 29 1.0 global;
+      mbdy state pos blade3 29 1.0 global; [13,14,15] global coordinates of point 3 (blade 3 tip)
     end output;
   end type2_dll;
 end dll;
@@ -655,7 +655,7 @@ begin output;
   constraint bearing1 shaft_rot 2; angle and angle velocity
   constraint bearing2 pitch1 5;    angle and angular velocity
   constraint bearing2 pitch2 5;    angle and angular velocity
-  constraint bearing2 pitch3 5;
+  constraint bearing2 pitch3 5;    angle and angular velocity
   ;
     wind free_wind 1 0.0 0.0 -170.0;
   ;   
@@ -859,10 +859,10 @@ begin output;
   mbdy momentvec blade2 1 1 blade2 # blade 2 root;
   mbdy momentvec blade3 1 1 blade3 # blade 3 root;
   ;
-  mbdy state pos tower 30 1.0 global only 1 # Tower top FA displ;
-  mbdy state pos tower 30 1.0 global only 2 # Tower top SS displ;
-  mbdy state acc tower 30 1.0 global only 1 # Tower top FA acc;
-  mbdy state acc tower 30 1.0 global only 2 # Tower top SS acc;
+  mbdy state pos tower 30 1.0 global only 1 # Tower top SS displ;
+  mbdy state pos tower 30 1.0 global only 2 # Tower top FA displ;
+  mbdy state acc tower 30 1.0 global only 1 # Tower top SS acc;
+  mbdy state acc tower 30 1.0 global only 2 # Tower top FA acc;
   mbdy state pos blade1 29 1.0 blade1 # blade 1 tip pos;
   mbdy state pos blade2 29 1.0 blade2 # blade 2 tip pos;
   mbdy state pos blade3 29 1.0 blade3 # blade 3 tip pos;
