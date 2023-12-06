@@ -216,18 +216,18 @@ False                  SumPrint    - Generate a summary file listing input optio
 "RtVAvgxh"
 "RtVAvgyh"
 "RtVAvgzh"
-B1N1VRel
-B1N2VRel
-B1N3VRel
-B1N1Re
-B1N2Re
-B1N3Re
-B1N1M
-B1N2M
-B1N3M
-B1N1Alpha
-B1N2Alpha
-B1N3Alpha
+"B1N1VRel"
+"B1N2VRel"
+"B1N3VRel"
+"B1N1Re"
+"B1N2Re"
+"B1N3Re"
+"B1N1M"
+"B1N2M"
+"B1N3M"
+"B1N1Alpha"
+"B1N2Alpha"
+"B1N3Alpha"
 END of input file (the word "END" must appear in the first 3 columns of this last OutList line)
 ====== Outputs for all blade stations (same ending as above for B1N1.... =========================== [optional section]
           1   BldNd_BladesOut     - Number of blades to output all node information at.  Up to number of blades on turbine. (-)
