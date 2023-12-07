@@ -1924,8 +1924,6 @@ begin output;
   aero secforce 1 2 138.368953184829700 4 ;
   aero secforce 1 2 138.404850806881460 4 ;
   ;
-  mbdy momentvec monopile 1 1 monopile # monopile base;
-  mbdy momentvec monopile 9 2 monopile # monopile top;
   mbdy momentvec tower 1 1 tower # tower base;
   mbdy momentvec tower 30 2 tower # tower yaw bearing;
   mbdy momentvec shaft 1 1 shaft # main bearing;
