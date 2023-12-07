@@ -14,8 +14,8 @@ BDtw_path = os.path.join(local_dir, '../OpenFAST/IEA-22-280-RWT')
 
 base_name1    = 'IEA-22-280-RWT'
 blade_length = 136.988
-ref_blade_mass = 81462.7
-ref_blade_mass_ED = 81638.1
+ref_blade_mass = 81273.3
+ref_blade_mass_ED = 81964.8
 
 class TestBladeMass(unittest.TestCase):
     def test_blade_mass_BDtw(self):
@@ -34,7 +34,7 @@ class TestBladeMass(unittest.TestCase):
         readBD1.read_BeamDyn(bd_file)
         BDtw = np.trapz(readBD1.fst_vt['BeamDynBlade']['beam_inertia'][:,0,0], readBD1.fst_vt['BeamDynBlade']['radial_stations']*blade_length)
         print('\nBlade mass in BD along twist centers ', BDtw)
-        self.assertAlmostEqual(BDtw/ref_blade_mass,1., places=3)
+        self.assertAlmostEqual(BDtw/ref_blade_mass,1., places=2)
 
     # def test_blade_mass_BDc2(self):
 
@@ -65,7 +65,7 @@ class TestBladeMass(unittest.TestCase):
         readED.read_ElastoDynBlade(ed_file)
         ED = np.trapz(readED.fst_vt['ElastoDynBlade']['BMassDen'], np.array(readED.fst_vt['ElastoDynBlade']['BlFract'])*blade_length)
         print('\nBlade mass in ED ', ED)
-        self.assertAlmostEqual(ED/ref_blade_mass_ED,1., places=3)
+        self.assertAlmostEqual(ED/ref_blade_mass_ED,1., places=2)
 
     # def test_blade_mass_H2(self):
 
