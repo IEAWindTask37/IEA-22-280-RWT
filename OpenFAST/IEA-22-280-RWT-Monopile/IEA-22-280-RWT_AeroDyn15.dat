@@ -46,7 +46,7 @@ True                   FLookup     - Flag to indicate whether a lookup for f' wi
 3                      InCol_Cd    - The column in the airfoil tables that contains the drag coefficient (-)
 4                      InCol_Cm    - The column in the airfoil tables that contains the pitching-moment coefficient; use zero if there is no Cm column (-)
 0                      InCol_Cpmin - The column in the airfoil tables that contains the Cpmin coefficient; use zero if there is no Cpmin column (-)
-30                     NumAFfiles  - Number of airfoil files used (-)
+51                     NumAFfiles  - Number of airfoil files used (-)
 "../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_00.dat"    AFNames            - Airfoil file names (NumAFfiles lines) (quoted strings)
 "../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_01.dat"
 "../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_02.dat"
@@ -77,6 +77,27 @@ True                   FLookup     - Flag to indicate whether a lookup for f' wi
 "../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_27.dat"
 "../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_28.dat"
 "../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_29.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_30.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_31.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_32.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_33.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_34.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_35.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_36.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_37.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_38.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_39.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_40.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_41.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_42.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_43.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_44.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_45.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_46.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_47.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_48.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_49.dat"
+"../IEA-22-280-RWT/Airfoils/IEA-22-280-RWT_AeroDyn15_Polar_50.dat"
 ======  Rotor/Blade Properties  =====================================================================
 True                   UseBlCm     - Include aerodynamic pitching moment in calculations?  (flag)
 "../IEA-22-280-RWT/IEA-22-280-RWT_AeroDyn15_blade.dat" ADBlFile(1) - Name of file containing distributed aerodynamic properties for Blade #1 (-)
@@ -128,15 +149,15 @@ TwrElev        TwrDiam        TwrCd          TwrTI          TwrCb !TwrTI used on
  1.643860000000000e+02  6.000000000000001e+00  5.000000000000000e-01  1.000000000000000e-01  0.000000000000000e+00 
 ======  Outputs  ====================================================================================
 False                  SumPrint    - Generate a summary file listing input options and interpolated properties to "<rootname>.AD.sum"?  (flag)
-9                      NBlOuts     - Number of blade node outputs [0 - 9] (-)
-4, 7, 10, 13, 15, 18, 21, 24, 27 BlOutNd     - Blade nodes whose values will be output  (-)
+3                      NBlOuts     - Number of blade node outputs [0 - 9] (-)
+25, 35, 45             BlOutNd     - Blade nodes whose values will be output  (-)
 0                      NTwOuts     - Number of tower node outputs [0 - 9]  (-)
 0                      TwOutNd     - Tower nodes whose values will be output  (-)
                    OutList             - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
-"RtAeroCp"
-"RtAeroCq"
-"RtAeroCt"
-"RtAeroPwr"
+"RtFldCp"
+"RtFldCq"
+"RtFldCt"
+"RtFldPwr"
 "RtArea"
 "RtSkew"
 "RtSpeed"
@@ -144,5 +165,26 @@ False                  SumPrint    - Generate a summary file listing input optio
 "RtVAvgxh"
 "RtVAvgyh"
 "RtVAvgzh"
+"B1N1VRel"
+"B1N2VRel"
+"B1N3VRel"
+"B1N1Re"
+"B1N2Re"
+"B1N3Re"
+"B1N1M"
+"B1N2M"
+"B1N3M"
+"B1N1Alpha"
+"B1N2Alpha"
+"B1N3Alpha"
 END of input file (the word "END" must appear in the first 3 columns of this last OutList line)
----------------------------------------------------------------------------------------
+====== Outputs for all blade stations (same ending as above for B1N1.... =========================== [optional section]
+          1   BldNd_BladesOut     - Number of blades to output all node information at.  Up to number of blades on turbine. (-)
+"All"         BldNd_BlOutNd       - Future feature will allow selecting a portion of the nodes to output.  Not implemented yet. (-)
+              OutList             - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
+"Ft"
+"Fn"
+"Fx"
+"Fy"
+END (the word "END" must appear in the first 3 columns of this last OutList line in the optional nodal output section)
+====================================================================================================
