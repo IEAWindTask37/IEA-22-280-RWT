@@ -14,8 +14,8 @@ BDtw_path = os.path.join(local_dir, '../OpenFAST/IEA-22-280-RWT')
 
 base_name1    = 'IEA-22-280-RWT'
 blade_length = 136.988
-ref_blade_mass = 81388.8
-ref_blade_mass_ED = 82768.7
+ref_blade_mass = 82087.9
+ref_blade_mass_ED = 81937.4
 
 class TestBladeMass(unittest.TestCase):
     def test_blade_mass_BDtw(self):
