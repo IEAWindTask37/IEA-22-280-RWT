@@ -645,8 +645,8 @@ components:
     hub_material: cast_iron
     spinner_material: glass_uniax
     elastic_properties_mb:
-      system_mass: 122067.22569610625
-      system_inertia: [1906651.6690234807, 1214494.3181919982, 1214494.3181919982, 0.0, 0.0, 0.0]
+      system_mass: 120447.70224890654
+      system_inertia: [1882498.8832803261, 1198002.42618154, 1198002.42618154, 0.0, 0.0, 0.0]
   nacelle:
     drivetrain:
       uptilt: 0.1047197551196598
