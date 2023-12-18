@@ -105,7 +105,7 @@ False                  WvSumQTF    - Full summation-frequency  2nd-order wave ki
 1           NPropSets   - Number of member property sets (-)
  PropSetID     PropD     PropThck  
     (-)         (m)         (m)    
-     1         10.0     0.08987873979876987
+     1         10.0     0.09155188908978543
 ---------------------- SIMPLE HYDRODYNAMIC COEFFICIENTS (model 1) --------------
   SimplCd    SimplCdMG    SimplCa    SimplCaMG    SimplCp    SimplCpMG   SimplAxCd  SimplAxCdMG  SimplAxCa  SimplAxCaMG  SimplAxCp  SimplAxCpMG
     (-)         (-)         (-)         (-)         (-)         (-)         (-)         (-)         (-)         (-)         (-)         (-)    
