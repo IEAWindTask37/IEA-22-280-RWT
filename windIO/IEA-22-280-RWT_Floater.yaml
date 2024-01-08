@@ -955,11 +955,11 @@ components:
           -  {name: line2_vessel, node_type: vessel, joint: col2_fairlead, fairlead_type: rigid, anchor_type: none, node_mass: 0.0, node_volume: 0.0, drag_area: 0.0, added_mass: 0.0}
           -  {name: line3_vessel, joint: col3_fairlead, node_type: vessel, fairlead_type: rigid, anchor_type: none, node_mass: 0.0, node_volume: 0.0, drag_area: 0.0, added_mass: 0.0}
       lines:
-          -  {name: line1, node1: line1_anchor, node2: line1_vessel, line_type: main, unstretched_length: 837.0}
-          -  {name: line2, node1: line2_anchor, node2: line2_vessel, line_type: main, unstretched_length: 837.0}
-          -  {name: line3, node1: line3_anchor, node2: line3_vessel, line_type: main, unstretched_length: 837.0}
+          -  {name: line1, node1: line1_anchor, node2: line1_vessel, line_type: main, unstretched_length: 850.0}
+          -  {name: line2, node1: line2_anchor, node2: line2_vessel, line_type: main, unstretched_length: 850.0}
+          -  {name: line3, node1: line3_anchor, node2: line3_vessel, line_type: main, unstretched_length: 850.0}
       line_types:
-          -  {name: main, diameter: 0.4, type: chain, transverse_added_mass: 1.0, tangential_added_mass: 0.0, transverse_drag: 1.6, tangential_drag: 0.1, damping: 0.0}
+          -  {name: main, diameter: 0.25, type: chain, transverse_added_mass: 1.0, tangential_added_mass: 0.0, transverse_drag: 1.6, tangential_drag: 0.1, damping: 0.0}
       anchor_types:
           -  {name: drag_embedment, type: drag_embedment}
 airfoils:
