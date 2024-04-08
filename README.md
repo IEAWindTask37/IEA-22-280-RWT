@@ -31,14 +31,13 @@ If you use this model in your research or publications, please cite the followin
 Zahle, F., Barlas, T., Lønbæk, K., Bortolotti, P., Zalkind, D., Wang, L., Labuschagne, C., Sethuraman, L., & Barter, G. (Accepted/In press). Definition of the IEA Wind 22-Megawatt Offshore Reference Wind Turbine. Technical University of Denmark. https://doi.org/10.11581/DTU.00000317
 
 ```
-@book{iea22mwrwt,
-title = "Definition of the IEA Wind 22-Megawatt Offshore Reference Wind Turbine",
-author = "Frederik Zahle and Thanasis Barlas and Kenneth L{\o}nb{\ae}k and Pietro Bortolotti and Daniel Zalkind and Lu Wang and Casper Labuschagne and Latha Sethuraman and Garrett Barter",
-note = "DTU Wind Energy Report E-0243 IEA Wind TCP Task 55",
-year = "2024",
-doi = "10.11581/DTU.00000317",
-language = "English",
-publisher = "Technical University of Denmark",
+@techreport{iea22mwrwt,
+    author = {Zahle, Frederik and Barlas, Athanasios and Lønbæk, Kenneth and Bortolotti, Pietro and Zalkind, Daniel and Wang, Lu and Labuschagne, Casper and Sethuraman, Latha and Barter, Garrett},
+    title = "{Definition of the IEA Wind 22-Megawatt Offshore Reference Wind Turbine}",
+    institution = "DTU Wind and Energy Systems, International Energy Agency",
+    number = {DTU Wind Report E-0243, https://doi.org/10.11581/DTU.00000317},
+    isbn = {978-87-87335-71-3},
+    year = 2024
 }
 ```
 
