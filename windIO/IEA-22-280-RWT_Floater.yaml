@@ -763,8 +763,6 @@ components:
             name: main_column
             joint1: main_keel
             joint2: main_freeboard
-            Ca: 1.0
-            Cd: 0.8
             outer_shape:
                 shape: circular
                 outer_diameter:
@@ -796,8 +794,6 @@ components:
             name: column1
             joint1: col1_keel
             joint2: col1_freeboard
-            Ca: 1.0
-            Cd: 0.8
             outer_shape: &id004
                 shape: circular
                 outer_diameter:
@@ -832,8 +828,6 @@ components:
             name: column2
             joint1: col2_keel
             joint2: col2_freeboard
-            Ca: 1.0
-            Cd: 0.8
             outer_shape: *id004
             internal_structure: *id005
             axial_joints:
@@ -845,8 +839,6 @@ components:
             name: column3
             joint1: col3_keel
             joint2: col3_freeboard
-            Ca: 1.0
-            Cd: 0.8
             outer_shape: *id004
             internal_structure: *id005
             axial_joints:
@@ -858,8 +850,6 @@ components:
             name: Y_pontoon_upper1
             joint1: main_upper_pontoon
             joint2: col1_upper_pontoon
-            Ca: 1.0
-            Cd: 0.8
             outer_shape: &id006
                 shape: circular
                 outer_diameter:
@@ -884,8 +874,6 @@ components:
             name: Y_pontoon_upper2
             joint1: main_upper_pontoon
             joint2: col2_upper_pontoon
-            Ca: 1.0
-            Cd: 0.8
             outer_shape: *id006
             internal_structure: *id007
             Cp: 0.0
@@ -893,8 +881,6 @@ components:
             name: Y_pontoon_upper3
             joint1: main_upper_pontoon
             joint2: col3_upper_pontoon
-            Ca: 1.0
-            Cd: 0.8
             outer_shape: *id006
             internal_structure: *id007
             Cp: 0.0
@@ -902,8 +888,6 @@ components:
             name: Y_pontoon_lower1
             joint1: main_lower_pontoon
             joint2: col1_lower_pontoon
-            Ca: 1.0
-            Cd: 0.8
             outer_shape: &id008
                 shape: circular
                 outer_diameter:
@@ -934,8 +918,6 @@ components:
             joint2: col2_lower_pontoon
             outer_shape: *id008
             internal_structure: *id009
-            Ca: 1.0
-            Cd: 0.8
             Cp: 0.0
           -  
             name: Y_pontoon_lower3
@@ -943,8 +925,6 @@ components:
             joint2: col3_lower_pontoon
             outer_shape: *id008
             internal_structure: *id009
-            Ca: 1.0
-            Cd: 0.8
             Cp: 0.0
   mooring:
       nodes:
