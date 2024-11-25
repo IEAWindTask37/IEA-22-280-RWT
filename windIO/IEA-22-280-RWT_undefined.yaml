@@ -1,0 +1,51 @@
+airfoils:
+  0: {description: null}
+  1: {description: null}
+  2: {description: null}
+  3: {description: null}
+  4: {description: null}
+  5: {description: null}
+  6: {description: null}
+  7: {description: null}
+  8:
+    polars:
+      0: {description: null}
+  9:
+    polars:
+      0: {description: null}
+  10:
+    polars:
+      0: {description: null}
+  11:
+    polars:
+      0: {description: null}
+  12:
+    polars:
+      0: {description: null}
+components:
+  blade:
+    elastic_properties_mb:
+      six_x_six: {inertia_matrix: null, twist: null}
+    internal_structure_2d_fem:
+      layers:
+        2: {offset_plane: null, side: null}
+        3: {offset_plane: null, side: null}
+        5: {side: null}
+        6: {side: null}
+      webs:
+        0: {offset_plane: null}
+        1: {offset_plane: null}
+        2: {offset_plane: null}
+  hub: {clearance_hub_spinner: null, cone_angle: null, diameter: null, drag_coefficient: null,
+    flange_ID2OD: null, flange_OD2hub_D: null, flange_t2shell_t: null, hub_blade_spacing_margin: null,
+    hub_material: null, hub_stress_concentration: null, n_front_brackets: null, n_rear_brackets: null,
+    pitch_system_scaling_factor: null, spin_hole_incr: null, spinner_gust_ws: null,
+    spinner_material: null}
+  nacelle:
+    drivetrain: {drag_coefficient: null, elastic_properties_mb: null}
+control:
+  pitch: {PC_omega: null, PC_zeta: null, max_pitch: null, ps_percent: null}
+  setpoint_smooth: null
+  shutdown: null
+  torque: {VS_omega: null, VS_zeta: null, control_type: null}
+environment: {significant_wave_height: null, significant_wave_period: null}
