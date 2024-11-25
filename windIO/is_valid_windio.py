@@ -46,11 +46,6 @@ schema_dict["properties"]["components"]["properties"]["monopile"]["properties"][
     "outer_shape"
 )
 
-# Bugfix for monopile drag-coefficient
-wio_dict["components"]["monopile"]["outer_shape_bem"]["drag_coefficient"] = dict(
-    grid=[0, 1], values=[0.5, 0.5]
-)
-
 # Bugfix for mooring node
 for node in wio_floater_dict["components"]["mooring"]["nodes"]:
     node["location"] = [0, 0, 0]
